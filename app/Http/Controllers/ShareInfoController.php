@@ -61,8 +61,32 @@ class ShareInfoController extends Controller
             )
         );
         $json = json_decode(file_get_contents("https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=FUTSTK&u=infy", false, $context), true);
-       
+
         return $json;
+    }
+
+    public function oiDetail()
+    {
+      $context = stream_context_create(
+          array(
+              'http' => array(
+                  'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                  'timeout' => 10000
+              ),
+          )
+      );
+        $f = file_put_contents("my-zip.zip", fopen("https://www.nseindia.com/archives/nsccl/mwpl/combineoi_20022019.zip", 'r', 0, $context), LOCK_EX,$context);
+        if(FALSE === $f)
+            die("Couldn't write to file.");
+        $zip = new \ZipArchive;
+        $res = $zip->open('my-zip.zip');
+        if ($res === TRUE) {
+          $zip->extractTo('f:/wamp/www/stockproject/sharemarket/public/extract-here');
+          $zip->close();
+          dd($zip);
+        } else {
+          //
+        }
     }
 
 }

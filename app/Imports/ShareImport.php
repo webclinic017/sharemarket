@@ -8,8 +8,6 @@
 namespace App\Imports;
 
 use App\Model\ShareInfo;
-use Illuminate\Support\Facades\Hash;
-use Maatwebsite\Excel\Concerns\ToModel;
 
 class ShareImport implements ToModel
 {
@@ -18,13 +16,16 @@ class ShareImport implements ToModel
      *
      * @return User|null
      */
-    public function model(array $row)
+    public function contextValue()
     {
-        dd($row);
-        return new ShareInfo([
-            'symbol'     => $row[0],
-            'isin'    => $row[1],
-            'company_name'    => $row[2],
-        ]);
+      $context = stream_context_create(
+          array(
+              'http' => array(
+                  'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                  'timeout' => 10000
+              ),
+          )
+      );
+      return $context;
     }
 }

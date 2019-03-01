@@ -36,20 +36,6 @@ class ShareInfoController extends Controller
         return redirect('/')->with('success', 'All good!');
     }
 
-    public function indexInfo($symbol)
-    {
-        $context = stream_context_create(
-            array(
-                'http' => array(
-                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
-                    'timeout' => 10000
-                ),
-            )
-        );
-        $json = json_decode(file_get_contents("https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/getPEDetails.jsp?symbol=$symbol", false, $context), true);
-        return $json;
-    }
-
     public function isFno()
     {
         $context = stream_context_create(
@@ -65,28 +51,67 @@ class ShareInfoController extends Controller
         return $json;
     }
 
+    public function indexInfo($symbol)
+    {
+        $context = stream_context_create(
+            array(
+                'http' => array(
+                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                    'timeout' => 10000
+                ),
+            )
+        );
+        $json = json_decode(file_get_contents("https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/getPEDetails.jsp?symbol=$symbol", false, $context), true);
+        return $json;
+    }
+
     public function oiDetail()
     {
-      $context = stream_context_create(
-          array(
-              'http' => array(
-                  'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
-                  'timeout' => 10000
-              ),
-          )
-      );
-        $f = file_put_contents("my-zip.zip", fopen("https://www.nseindia.com/archives/nsccl/mwpl/combineoi_20022019.zip", 'r', 0, $context), LOCK_EX,$context);
-        if(FALSE === $f)
+        $str = "\\extract-here";
+        $path = public_path().$str;
+        $context = stream_context_create(
+            array(
+                'http' => array(
+                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                    'timeout' => 10000
+                ),
+            )
+        );
+        $f = file_put_contents("my-zip.zip", fopen("https://www.nseindia.com/archives/nsccl/mwpl/combineoi_25022019.zip", 'r', 0, $context), LOCK_EX, $context);
+        if (false === $f) {
             die("Couldn't write to file.");
+        }
         $zip = new \ZipArchive;
         $res = $zip->open('my-zip.zip');
-        if ($res === TRUE) {
-          $zip->extractTo('f:/wamp/www/stockproject/sharemarket/public/extract-here');
-          $zip->close();
-          dd($zip);
+        if ($res === true) {
+            $zip->extractTo($path);
+            $zip->close();
+            dd($zip);
         } else {
-          //
+            //
         }
+    }
+
+    public function datToJson()
+    {
+        $context = stream_context_create(
+            array(
+                'http' => array(
+                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                    'timeout' => 10000
+                ),
+            )
+        );
+        $json = json_decode(file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context), true);
+        dd(json_encode(file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context),false));
+
+        $file = fopen('https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT', 'r+');
+        // dd($file, fgetcsv($file));'
+        $shareArray = $temp = $indexData = array();
+        while (($line = fgetcsv($file)) !== false) {
+            array_push($temp, $line);
+        }
+        return $json;
     }
 
 }

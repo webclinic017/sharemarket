@@ -21,3 +21,4 @@ Route::get('/shareinfo', 'ShareInfoController@import')->name('import');
 Route::get('/shareindex', 'ShareInfoController@indexInfo')->name('indexInfo');
 Route::get('/checkfno', 'ShareInfoController@isFno')->name('checkfno');
 Route::get('/checkoi', 'ShareInfoController@oiDetail')->name('oiDetail');
+Route::get('/sharedatapull', 'StockDataController@shareData')->name('shareData');

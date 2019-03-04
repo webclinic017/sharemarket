@@ -7,7 +7,6 @@
  */
 
 namespace App\Imports;
-qq
 use App\Model\ShareInfo;
 
 class ShareImport
@@ -71,6 +70,7 @@ class ShareImport
     {
         $file = $this->pullDataFromRemote($url);
         libxml_use_internal_errors(true);
+        dd($file,$this->domDocument->loadHTML($file));
         return ($file) ? $this->domDocument->loadHTML($file) : false;
     }
 
@@ -83,7 +83,7 @@ class ShareImport
     public function findId($id)
     {
         $element = $this->domDocument->getElementById($id);
-        return $element->nodeValue;
+        return $element;
     }
 
     /**
@@ -126,5 +126,25 @@ class ShareImport
             )
         );
         return $context;
+    }
+
+    public function downloadZip($url)
+    {
+      $str = "\\extract-here";
+      $path = public_path().$str;
+      $f = file_put_contents("my-zip.zip", fopen("$url", 'r', 0, $this->context), LOCK_EX, $this->context);
+      if (false === $f) {
+          die("Couldn't write to file.");
+      }
+      $zip = new \ZipArchive;
+      $res = $zip->open('my-zip.zip');
+      if ($res === true) {
+          $zip->extractTo($path);
+          $zip->close();
+          dd($zip);
+          return true;
+      } else {
+        return false;
+      }
     }
 }

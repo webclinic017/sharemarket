@@ -68,7 +68,7 @@ class ShareInfoController extends Controller
     public function oiDetail()
     {
         $str = "\\extract-here";
-        $path = public_path().$str;
+        $path = public_path() . $str;
         $context = stream_context_create(
             array(
                 'http' => array(
@@ -102,26 +102,25 @@ class ShareInfoController extends Controller
                 ),
             )
         );
-      //  $json = json_decode(file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context), true);
+        //  $json = json_decode(file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context), true);
         //dd(json_encode(file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context),false));
 
         $file = file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_22022019.DAT", false, $context);
         $convert = explode("\n", $file); //create array separate by new line
 
 
-
         foreach ($convert as $value) {
-          $shareArray[] = explode(",", $value);
+            $shareArray[] = explode(",", $value);
         }
         //dd($shareArray);
-        $j=0;
-        for ($i=4; $i < count($shareArray)-1; $i++) {
-          $dataDelivery[$j]['symbol'] = $shareArray[$i][2];
-          $dataDelivery[$j]['series'] = $shareArray[$i][3];
-          $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4];
-          $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5];
-          $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6];
-          $j++;
+        $j = 0;
+        for ($i = 4; $i < count($shareArray) - 1; $i++) {
+            $dataDelivery[$j]['symbol'] = $shareArray[$i][2];
+            $dataDelivery[$j]['series'] = $shareArray[$i][3];
+            $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4];
+            $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5];
+            $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6];
+            $j++;
         }
         dd($dataDelivery);
         $shareArray = $dataDelivery = array();
@@ -130,7 +129,7 @@ class ShareInfoController extends Controller
         //     $tag_value[] = explode("\n", $tag->nodeValue);
         // }
         while (($line = fgetcsv($file)) !== false) {
-          dd($line);
+            dd($line);
             array_push($temp, $line);
         }
         return $json;

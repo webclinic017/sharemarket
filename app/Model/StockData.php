@@ -37,43 +37,41 @@ class StockData extends Model
 
     public function shareOHLC()
     {
-      $from = new DateTime('2018-01-01 00:00:00');
-      $to = new DateTime('2019-03-01 00:00:00');
-      $url = "https://www.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
-      $html = $this->shareImp->downloadZip($url);
-      $html = $this->shareImp->get($url);
+        $from = new DateTime('2018-01-01 00:00:00');
+        $to = new DateTime('2019-03-01 00:00:00');
+        $url = "https://www.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
+        $html = $this->shareImp->downloadZip($url);
+        $html = $this->shareImp->get($url);
     }
 
     public function delivery($date)
     {
-      $file = @file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
-      if($file) {
-        $convert = explode("\n", $file); //create array separate by new line
-        foreach ($convert as $value) {
-          $shareArray[] = explode(",", $value);
+        $file = @file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
+        if ($file) {
+            $convert = explode("\n", $file); //create array separate by new line
+            foreach ($convert as $value) {
+                $shareArray[] = explode(",", $value);
+            }
+            $j = 0;
+            for ($i = 4; $i < count($shareArray) - 1; $i++) {
+                if (count($shareArray) > 0 && isset($shareArray[$i][2]) && 'eq' === strtolower($shareArray[$i][3])) {
+                    $dataDelivery[$j]['symbol'] = $shareArray[$i][2] ?? null;
+                    $dataDelivery[$j]['series'] = $shareArray[$i][3] ?? null;
+                    $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4] ?? null;
+                    $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5] ?? null;
+                    $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6] ?? null;
+                    $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
+                    $j++;
+                }
+            }
+            return $dataDelivery;
+        } else {
+            return false;
         }
-        $j=0;
-        for ($i=4; $i < count($shareArray)-1; $i++) {
-          if(count($shareArray)> 0  && isset($shareArray[$i][2])){
-            $dataDelivery[$j]['symbol'] = $shareArray[$i][2];
-            $dataDelivery[$j]['series'] = $shareArray[$i][3];
-            $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4];
-            $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5];
-            $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6];
-            $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
-            $j++;
-          }
-        }
-        return $dataDelivery;
-      }
-      else {
-        return false;
-      }
-
     }
 
     public function insertData(array $dataDelivery)
     {
-      return StockData::insert($dataDelivery);
+        return StockData::insert($dataDelivery);
     }
 }

@@ -22,8 +22,8 @@ class StockDataController extends Controller
 
     public function delivery()
     {
-        $from = new \DateTime('2011-01-01 00:00:00');
-        $to = new \DateTime('2019-03-06 00:00:00');
+        $from = new \DateTime('2012-01-01 00:00:00');
+        $to = new \DateTime('2019-03-08 00:00:00');
 
         for ($i = 0; $from != $to; $i++) {
             if (in_array($from->format('D'), ['Sat', 'Sun'])) {
@@ -36,7 +36,7 @@ class StockDataController extends Controller
                     $yn = $this->sD->insertData($dataDelivery);
                     if ($yn) {
                         $DelDate = $from->format('Y-m-d');
-                        DB::table('dateinsert_report')->insert(['report' => 'delivery', 'date' => $DelDate]);
+                        DB::table('dateinsert_report')->insert(['report' => 2, 'date' => $DelDate]);
                     }
                 }
                 $from = $from->modify('+1 day');

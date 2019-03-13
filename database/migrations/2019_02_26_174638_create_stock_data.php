@@ -25,11 +25,11 @@ class CreateStockData extends Migration
             $table->float('close');
             $table->float('last_price');
             $table->float('vwap');
-            $table->unsignedDecimal('total_traded_qty', 10, 2);
-            $table->unsignedDecimal('turnover', 10, 2);
-            $table->unsignedDecimal('no_of_trades', 10, 2);
-            $table->unsignedDecimal('deliverable_qty', 10, 2);
-            $table->unsignedDecimal('per_delqty_to_trdqty', 10, 2);
+            $table->unsignedDecimal('total_traded_qty', 20, 2);
+            $table->unsignedDecimal('turnover', 20, 2);
+            $table->unsignedDecimal('no_of_trades', 20, 2);
+            $table->unsignedDecimal('deliverable_qty', 20, 2);
+            $table->unsignedDecimal('per_delqty_to_trdqty', 20, 2);
             $table->unsignedInteger('combine_oi')->nullable();
             $table->timestamps();
         });

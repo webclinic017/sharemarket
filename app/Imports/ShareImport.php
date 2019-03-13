@@ -7,6 +7,7 @@
  */
 
 namespace App\Imports;
+
 use App\Model\ShareInfo;
 
 class ShareImport
@@ -40,6 +41,20 @@ class ShareImport
     }
 
     /**
+     * Initialize scrapping websites
+     *
+     * @param  string $url
+     * @return bool
+     */
+    public function get($url)
+    {
+        $file = $this->pullDataFromRemote($url);
+        libxml_use_internal_errors(true);
+        dd($file, $this->domDocument->loadHTML($file));
+        return ($file) ? $this->domDocument->loadHTML($file) : false;
+    }
+
+    /**
      * This function will pull data from remote URLs
      *
      * @return string
@@ -58,20 +73,6 @@ class ShareImport
             false,
             $context
         );
-    }
-
-    /**
-     * Initialize scrapping websites
-     *
-     * @param  string $url
-     * @return bool
-     */
-    public function get($url)
-    {
-        $file = $this->pullDataFromRemote($url);
-        libxml_use_internal_errors(true);
-        dd($file,$this->domDocument->loadHTML($file));
-        return ($file) ? $this->domDocument->loadHTML($file) : false;
     }
 
     /**
@@ -130,21 +131,30 @@ class ShareImport
 
     public function downloadZip($url)
     {
-      $str = "\\extract-here";
-      $path = public_path().$str;
-      $f = file_put_contents("my-zip.zip", fopen("$url", 'r', 0, $this->context), LOCK_EX, $this->context);
-      if (false === $f) {
-          die("Couldn't write to file.");
-      }
-      $zip = new \ZipArchive;
-      $res = $zip->open('my-zip.zip');
-      if ($res === true) {
-          $zip->extractTo($path);
-          $zip->close();
-          dd($zip);
-          return true;
-      } else {
-        return false;
-      }
+        $str = "\\extract-here";
+        $path = public_path() . $str;
+        $f = file_put_contents("my-zip.zip", fopen("$url", 'r', 0, $this->context), LOCK_EX, $this->context);
+        if (false === $f) {
+            die("Couldn't write to file.");
+        }
+        $zip = new \ZipArchive;
+        $res = $zip->open('my-zip.zip');
+        if ($res === true) {
+            $zip->extractTo($path);
+            $zip->close();
+            dd($zip);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function convertPlainTextLineByLineToArray($data)
+    {
+        $convert = explode("\n", $data); //create array separate by new line
+        foreach ($convert as $value) {
+            $dataArray[] = explode(",", $value);
+        }
+        return $dataArray;
     }
 }

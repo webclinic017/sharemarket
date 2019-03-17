@@ -50,7 +50,7 @@ class ShareImport
     {
         $file = $this->pullDataFromRemote($url);
         libxml_use_internal_errors(true);
-        dd($file, $this->domDocument->loadHTML($file));
+        //dd($file, $this->domDocument->loadHTML($file));
         return ($file) ? $this->domDocument->loadHTML($file) : false;
     }
 

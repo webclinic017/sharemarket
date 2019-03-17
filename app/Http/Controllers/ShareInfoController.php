@@ -67,6 +67,8 @@ class ShareInfoController extends Controller
 
     public function oiDetail()
     {
+        $si = new ShareInfo();
+        $si->oiPullDates();
         $str = "\\extract-here";
         $path = public_path() . $str;
         $context = stream_context_create(

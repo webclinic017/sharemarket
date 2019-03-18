@@ -70,8 +70,37 @@ class StockData extends Model
         }
     }
 
+    public function bhavCopyDataPull()
+    {
+        $url = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
+        return $this->shareImp->pullDataFromRemote($url);
+
+    }
+
     public function insertData(array $dataDelivery)
     {
         return StockData::insert($dataDelivery);
+    }
+
+    public function stockDataStructure($shareArray)
+    {
+        $j = 0;
+        for ($i = 4; $i < count($shareArray) - 1; $i++) {
+            if (count($shareArray) > 0 && isset($shareArray[$i][0]) && 'eq' === strtolower($shareArray[$i][1])) {
+                $dataDelivery[$j]['symbol'] = $shareArray[$i][0] ?? null;
+                $dataDelivery[$j]['series'] = $shareArray[$i][1] ?? null;
+                $dataDelivery[$j]['prev_close'] = $shareArray[$i][4] ?? null;
+                $dataDelivery[$j]['open'] = $shareArray[$i][5] ?? null;
+                $dataDelivery[$j]['high'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['low'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['close'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['last_price'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
+
+                $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
+                $j++;
+            }
+        }
     }
 }

@@ -25,3 +25,4 @@ Route::get('/sharedatapull', 'StockDataController@shareData')->name('shareData')
 Route::get('/datToJson', 'ShareInfoController@datToJson')->name('datToJson');
 Route::get('/delivery', 'StockDataController@delivery')->name('delivery');
 Route::get('/participantOIData', 'ParticipantController@participantOIData')->name('participantOIData');
+Route::get('/bhavcopy', 'StockDataController@bhavCopyDataPull')->name('bhavcopy');

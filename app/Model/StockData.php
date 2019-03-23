@@ -44,7 +44,32 @@ class StockData extends Model
         $html = $this->shareImp->get($url);
     }
 
-    public function delivery($date)
+    public function delivery($from, $to)
+    {
+        $frm = $from->format('Y-m-d');
+        for ($i = 0; $from <= $to; $i++) {
+            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+                $from = $from->modify('+1 day');
+            } else {
+                $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
+                $dataDelivery = $this->deliveryPull($dateOfDelivery);
+                if ($dataDelivery) {
+                    $yn = false;
+                    $yn = $this->insertData($dataDelivery);
+                    if ($yn) {
+                        $DelDate = $from->format('Y-m-d');
+                        \DB::table('dateinsert_report')->insert(['report' => 2, 'date' => $DelDate]);
+                    }
+                }
+                $from = $from->modify('+1 day');
+            }
+        }
+        $to = $to->format('Y-m-d');
+
+        return "All delivery done from $frm to $to\n";
+    }
+
+    public function deliveryPull($date)
     {
         $file = @file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
         if ($file) {
@@ -70,16 +95,16 @@ class StockData extends Model
         }
     }
 
+    public function insertData(array $dataDelivery)
+    {
+        return StockData::insert($dataDelivery);
+    }
+
     public function bhavCopyDataPull()
     {
         $url = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
         return $this->shareImp->pullDataFromRemote($url);
 
-    }
-
-    public function insertData(array $dataDelivery)
-    {
-        return StockData::insert($dataDelivery);
     }
 
     public function stockDataStructure($shareArray)

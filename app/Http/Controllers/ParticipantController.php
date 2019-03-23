@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\ParticipantOI;
+use DB;
 
 class ParticipantController extends Controller
 {
@@ -16,29 +17,31 @@ class ParticipantController extends Controller
 
     public function participantOIData()
     {
-        $from = new \DateTime('2012-01-01 00:00:00');
-        $to = new \DateTime('2019-03-08 00:00:00');
+        $from = new \DateTime('2014-03-09 00:00:00');
+        $to = new \DateTime('2019-03-13 00:00:00');
 
-        for ($i = 0; $from != $to; $i++) {
+        for ($i = 0; $from <= $to; $i++) {
             if (in_array($from->format('D'), ['Sat', 'Sun'])) {
                 $from = $from->modify('+1 day');
             } else {
                 $dateOfPOI = $from->format('d') . $from->format('m') . $from->format('Y');
                 $dataPOI = $this->pOi->participantOIDataPull($dateOfPOI);
-                $this->pOi->tableDataStructure($dataPOI, $dateOfPOI);
-                if ($dataPOI) {
+                $poiDataStructure = $this->pOi->tableDataStructure($dataPOI, $dateOfPOI);
+                //  dd($poiDataStructure, $dataPOI);
+                if ($poiDataStructure) {
                     $yn = false;
-                    $yn = $this->pOi->insertData($dataPOI);
+                    $yn = $this->pOi->insertData($poiDataStructure);
                     if ($yn) {
-                        $DelDate = $from->format('Y-m-d');
-                        DB::table('dateinsert_report')->insert(['report' => 'POI', 'date' => $DelDate]);
+                        $oiDate = $from->format('Y-m-d');
+                        DB::table('dateinsert_report')->insert(['report' => 3, 'date' => $oiDate]);
                     }
                 }
                 $from = $from->modify('+1 day');
             }
         }
-        echo "all Participant Open Interest done\n";
-        return "true";
+        $fm = $from->format('Y-m-d');
+        $td = $to->format('Y-m-d');
+        return "All Participant Open Interest done from $fm to $td";
 
     }
 }

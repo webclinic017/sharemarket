@@ -18,4 +18,13 @@ class OptionController extends Controller
     $od->optionDataFetch($url);
     dd($data);
   }
+
+  #todo
+  //TO GET ALL WEEKLY EXPIRIES OF INDEX
+  //API https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=OPTIDX&u=NIFTY&e=&o=&k=
+
+  //TO GET ALL MONTHLY EXPIRIES AND FNO STOCKS
+  //API https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=FUTSTK&u=INFY&e=&o=&k=
+
+
 }

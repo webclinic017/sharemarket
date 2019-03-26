@@ -44,7 +44,32 @@ class StockData extends Model
         $html = $this->shareImp->get($url);
     }
 
-    public function delivery($date)
+    public function delivery($from, $to)
+    {
+        $frm = $from->format('Y-m-d');
+        for ($i = 0; $from <= $to; $i++) {
+            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+                $from = $from->modify('+1 day');
+            } else {
+                $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
+                $dataDelivery = $this->deliveryPull($dateOfDelivery);
+                if ($dataDelivery) {
+                    $yn = false;
+                    $yn = $this->insertData($dataDelivery);
+                    if ($yn) {
+                        $DelDate = $from->format('Y-m-d');
+                        \DB::table('dateinsert_report')->insert(['report' => 2, 'date' => $DelDate]);
+                    }
+                }
+                $from = $from->modify('+1 day');
+            }
+        }
+        $to = $to->format('Y-m-d');
+
+        return "All delivery done from $frm to $to\n";
+    }
+
+    public function deliveryPull($date)
     {
         $file = @file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
         if ($file) {
@@ -73,5 +98,34 @@ class StockData extends Model
     public function insertData(array $dataDelivery)
     {
         return StockData::insert($dataDelivery);
+    }
+
+    public function bhavCopyDataPull()
+    {
+        $url = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
+        return $this->shareImp->pullDataFromRemote($url);
+
+    }
+
+    public function stockDataStructure($shareArray)
+    {
+        $j = 0;
+        for ($i = 4; $i < count($shareArray) - 1; $i++) {
+            if (count($shareArray) > 0 && isset($shareArray[$i][0]) && 'eq' === strtolower($shareArray[$i][1])) {
+                $dataDelivery[$j]['symbol'] = $shareArray[$i][0] ?? null;
+                $dataDelivery[$j]['series'] = $shareArray[$i][1] ?? null;
+                $dataDelivery[$j]['prev_close'] = $shareArray[$i][4] ?? null;
+                $dataDelivery[$j]['open'] = $shareArray[$i][5] ?? null;
+                $dataDelivery[$j]['high'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['low'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['close'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['last_price'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
+                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
+
+                $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
+                $j++;
+            }
+        }
     }
 }

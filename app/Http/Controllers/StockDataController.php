@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\StockData;
+use App\Imports\ShareImport;
 use DB;
 
 class StockDataController extends Controller
@@ -13,6 +14,7 @@ class StockDataController extends Controller
     public function __construct()
     {
         $this->sD = new StockData();
+        $this->shareImp = new ShareImport();
     }
 
     public function shareData()
@@ -20,29 +22,13 @@ class StockDataController extends Controller
         $this->sD->shareDataPull();
     }
 
-    public function delivery()
+    public function bhavCopyDataPull()
     {
-        $from = new \DateTime('2012-01-01 00:00:00');
-        $to = new \DateTime('2019-03-08 00:00:00');
-
-        for ($i = 0; $from != $to; $i++) {
-            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
-                $from = $from->modify('+1 day');
-            } else {
-                $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
-                $dataDelivery = $this->sD->delivery($dateOfDelivery);
-                if ($dataDelivery) {
-                    $yn = false;
-                    $yn = $this->sD->insertData($dataDelivery);
-                    if ($yn) {
-                        $DelDate = $from->format('Y-m-d');
-                        DB::table('dateinsert_report')->insert(['report' => 2, 'date' => $DelDate]);
-                    }
-                }
-                $from = $from->modify('+1 day');
-            }
-        }
-        echo "all delivery done";
-        return "true";
+        $data = $this->sD->bhavCopyDataPull();
+        $bhavcopy = $this->shareImp->convertPlainTextLineByLineToArray($data);
+        dd($bhavcopy);
     }
+
+
+
 }

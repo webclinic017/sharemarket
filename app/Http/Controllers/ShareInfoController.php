@@ -69,29 +69,7 @@ class ShareInfoController extends Controller
     {
         $si = new ShareInfo();
         $si->oiPullDates();
-        $str = "\\extract-here";
-        $path = public_path() . $str;
-        $context = stream_context_create(
-            array(
-                'http' => array(
-                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
-                    'timeout' => 10000
-                ),
-            )
-        );
-        $f = file_put_contents("my-zip.zip", fopen("https://www.nseindia.com/archives/nsccl/mwpl/combineoi_25022019.zip", 'r', 0, $context), LOCK_EX, $context);
-        if (false === $f) {
-            die("Couldn't write to file.");
-        }
-        $zip = new \ZipArchive;
-        $res = $zip->open('my-zip.zip');
-        if ($res === true) {
-            $zip->extractTo($path);
-            $zip->close();
-            dd($zip);
-        } else {
-            //
-        }
+        return "OI data pull Successfully";
     }
 
     public function datToJson()
@@ -137,4 +115,4 @@ class ShareInfoController extends Controller
         return $json;
     }
 
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }

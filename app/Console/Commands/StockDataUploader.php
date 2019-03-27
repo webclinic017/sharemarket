@@ -59,6 +59,7 @@ class StockDataUploader extends Command
         echo $this->participantOI();
         echo $this->delivery();
         echo $this->openInterest();
+        return true;
     }
 
     public function participantOI()
@@ -77,11 +78,11 @@ class StockDataUploader extends Command
     {
         $tableName = 'stock_data';
         $frmToDates = $this->cf->fromDateToDate($tableName);
-        if ($frmToDates === false)
+        if ($frmToDates === false) {
             return "delivery data is already updated";
-        else
+        } else {
             return $this->sd->delivery($frmToDates['fromDate'], $frmToDates['toDate']);
-
+        }
     }
 
     public function openInterest()

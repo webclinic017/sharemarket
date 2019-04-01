@@ -25,7 +25,6 @@ Route::get('/sharedatapull', 'StockDataController@shareData')->name('shareData')
 Route::get('/datToJson', 'ShareInfoController@datToJson')->name('datToJson');
 Route::get('/delivery', 'StockDataController@delivery')->name('delivery');
 Route::get('/participantOIData', 'ParticipantController@participantOIData')->name('participantOIData');
-
 Route::get('/bhavcopy', 'StockDataController@bhavCopyDataPull')->name('bhavcopy');
-
 Route::get('/option', 'OptionController@optionDataFetch')->name('option');
+Route::get('/openinterest', 'OptionController@openInterestBrkOut')->name('optionBrkOut');

@@ -19,6 +19,7 @@ class OptionData extends Model
 
     public function optionDataFetch($url)
     {
+        //dd($this->fnoStocksExpiry());
         $data = $this->shareImp->get($url);
         $dataById = $this->shareImp->findTag('tr');
         foreach ($dataById as $tag) {
@@ -30,7 +31,18 @@ class OptionData extends Model
         }
         dd($finalData);
 
+        return $finalData;
+    }
 
-        return $dataArray;
+    public function fnoStocksExpiry()
+    {
+        $fnoData = json_decode(file_get_contents("https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=FUTSTK&u=infy", false, $this->context), true);
+        return $fnoData;
+    }
+
+    public function stockOptionData()
+    {
+        $fnodata = $this->fnoStocksExpiry();
+
     }
 }

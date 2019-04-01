@@ -28,3 +28,4 @@ Route::get('/participantOIData', 'ParticipantController@participantOIData')->nam
 Route::get('/bhavcopy', 'StockDataController@bhavCopyDataPull')->name('bhavcopy');
 Route::get('/option', 'OptionController@optionDataFetch')->name('option');
 Route::get('/openinterest', 'OptionController@openInterestBrkOut')->name('optionBrkOut');
+Route::get('/avgoi', 'OpenInterestController@avgOIPerDay')->name('avgoi');

@@ -14,7 +14,7 @@ class ShareInfo extends Model
         //    $from = new \DateTime('2019-03-13 00:00:00');
         //    $to = new \DateTime('2019-03-22 00:00:00');
         $fm = $from->format('Y-m-d');//for printing purpose only
-        for ($i = 0; $from != $to; $i++) {
+        for ($i = 0; $from <= $to; $i++) {
             if (in_array($from->format('D'), ['Sat', 'Sun'])) {
                 $from = $from->modify('+1 day');
             } else {
@@ -30,7 +30,7 @@ class ShareInfo extends Model
                       $yn = $this->insertData($oiDataStore);
                       if ($yn) {
                           $DelDate = $from->format('Y-m-d');
-                          \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
+                          $yn = \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
                       }
                     }
                 }

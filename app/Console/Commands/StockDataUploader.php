@@ -59,9 +59,9 @@ class StockDataUploader extends Command
         //OI
         //Bhavcopy
         //participant OI
+        echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
-        dd($this->openInterest());
         $this->oi->avgOIAsPerDayWatchlist();
         return true;
     }

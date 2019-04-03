@@ -26,10 +26,12 @@ class ShareInfo extends Model
                     $oiDataStore = $this->oiDataStructure($oiDataPull, $from);
                     //dd($from,$dataDelivery,$oiDataPull,$oiDataStore);
                     $yn = false;
-                    $yn = $this->insertData($oiDataStore);
-                    if ($yn) {
-                        $DelDate = $from->format('Y-m-d');
-                        \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
+                    if(isset($oiDataStore[0]) && count($oiDataStore) > 1) {
+                      $yn = $this->insertData($oiDataStore);
+                      if ($yn) {
+                          $DelDate = $from->format('Y-m-d');
+                          \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
+                      }
                     }
                 }
                 $from = $from->modify('+1 day');

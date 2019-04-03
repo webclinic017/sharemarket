@@ -3,12 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-
-class OpenInterestController extends Controller
-{
-    //
-=======
 use App\Model\OpenInterest;
 
 class OpenInterestController extends Controller
@@ -23,9 +17,10 @@ class OpenInterestController extends Controller
     public function avgOIPerDay()
     {
         $day = 19;
-        $curOi = $this->oi->currentOI();
-        $avgOi = $this->oi->avgOIPerDay($day);
-        $this->oi->comparisonWithCurrentToAvg($curOi, $avgOi);
+        $latestDate = $this->oi->getLatestDate();
+        $curOi = $this->oi->currentOI($latestDate);
+        $avgOi = $this->oi->avgOIPerDay($day,$latestDate);
+        $finalList = $this->oi->comparisonWithCurrentToAvg($curOi, $avgOi);
+        $this->oi->addWatchlist($finalList);
     }
->>>>>>> 9d43eba4ec3d8c05301d84819f795c93308ea024
 }

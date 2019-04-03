@@ -7,6 +7,7 @@ use App\Model\StockData;
 use App\Model\ShareInfo;
 use App\Model\ParticipantOI;
 use App\Model\OptionData;
+use App\Model\OpenInterest;
 use App\Imports\CommonFunctionality;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
@@ -17,6 +18,7 @@ class StockDataUploader extends Command
     public $po;
     public $od;
     public $sim;
+    public $oi;
     /**
      * The name and signature of the console command.
      *
@@ -41,6 +43,7 @@ class StockDataUploader extends Command
         $this->po = new ParticipantOI();
         $this->sd = new StockData();
         $this->od = new OptionData();
+        $this->oi = new OpenInterest();
         $this->si = new ShareInfo();
         $this->cf = new CommonFunctionality();
     }
@@ -58,7 +61,8 @@ class StockDataUploader extends Command
         //participant OI
         echo $this->participantOI();
         echo $this->delivery();
-        echo $this->openInterest();
+        dd($this->openInterest());
+        $this->oi->avgOIAsPerDayWatchlist();
         return true;
     }
 

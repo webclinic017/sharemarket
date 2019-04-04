@@ -44,7 +44,7 @@ class OpenInterest extends Model
 
     public function comparisonWithCurrentToAvg($curOi, $avgOi)
     {
-        dd($curOi, $avgOi);
+        //dd($curOi, $avgOi);
         $j = 0;
         $finalList = [];
         foreach ($curOi as $keyCurOi => $valCurOi) {

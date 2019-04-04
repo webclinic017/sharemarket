@@ -13,11 +13,21 @@ class CreateOptionChain extends Migration
      */
     public function up()
     {
-        Schema::create('option_chain', function (Blueprint $table) {
+      Schema::table('oi_data', function (Blueprint $table) {
+          $table->smallInteger('watchlist')->nullable();
+      });
+      
+      Schema::create('option_chain_expiry', function (Blueprint $table) {
+          $table->increments('id');
+          $table->date('expirydate');
+          $table->string('expiry_type');
+      });
+
+      Schema::create('option_chain', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
+            $table->unsignedBigInteger('oce_id');
             $table->string('symbol');
-            $table->date('expiry');
             $table->bigInteger('calloi')->nullable();
             $table->bigInteger('callchnginoi')->nullable();
             $table->bigInteger('callvolume')->nullable();
@@ -45,12 +55,12 @@ class CreateOptionChain extends Migration
             $table->bigInteger('totalputvolume')->nullable();
             $table->decimal('pcr',3,2)->nullable();
             $table->decimal('ivratio',3,2);
-            $table->smallInteger('putiv')->nullable();
+            $table->smallInteger('expiry')->nullable();
+            $table->smallInteger('watchlist')->nullable();
         });
 
-        Schema::create('option_chain', function (Blueprint $table) {
-            $table->increments('id');
-            $table->date('expirydate');
+        Schema::table('option_chain', function (Blueprint $table) {
+          $table->foreign('oce_id')->references('id')->on('option_chain_expiry');
         });
     }
 
@@ -62,5 +72,6 @@ class CreateOptionChain extends Migration
     public function down()
     {
         Schema::dropIfExists('option_chain');
+        Schema::dropIfExists('option_chain_expiry');
     }
 }

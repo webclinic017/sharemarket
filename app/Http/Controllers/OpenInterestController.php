@@ -17,8 +17,10 @@ class OpenInterestController extends Controller
     public function avgOIPerDay()
     {
         $day = 19;
-        $curOi = $this->oi->currentOI();
-        $avgOi = $this->oi->avgOIPerDay($day);
-        $this->oi->comparisonWithCurrentToAvg($curOi, $avgOi);
+        $latestDate = $this->oi->getLatestDate();
+        $curOi = $this->oi->currentOI($latestDate);
+        $avgOi = $this->oi->avgOIPerDay($day,$latestDate);
+        $finalList = $this->oi->comparisonWithCurrentToAvg($curOi, $avgOi);
+        $this->oi->addWatchlist($finalList);
     }
 }

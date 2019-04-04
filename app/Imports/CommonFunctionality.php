@@ -25,11 +25,11 @@ class CommonFunctionality
             return false;
 
 
-        if ($fdResult->date) {
+        if (isset($fdResult->date) && $fdResult->date) {
             $fromDate = new \DateTime($fdResult->date);
             $fromDate = $fromDate->modify('+1 day');
         } else {
-            $fromDate = new \DateTime('2018-01-01');
+            $fromDate = new \DateTime('2015-09-31');
         }
 
         $toDate = new \DateTime();

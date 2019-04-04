@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MWPL_Viols>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE069A01017</ISIN>
+	<Scrip_Name>ADITYA BIRLA NUVO LIMITED</Scrip_Name>
+	<NSE_Symbol>ABIRLANUVO</NSE_Symbol>
+	<MWPL_Limit>10506500</MWPL_Limit>
+	<Open_Interest>563625</Open_Interest>
+	<Limit_for_Next_Day>9417550</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE012A01025</ISIN>
+	<Scrip_Name>ACC LIMITED</Scrip_Name>
+	<NSE_Symbol>ACC</NSE_Symbol>
+	<MWPL_Limit>18663247</MWPL_Limit>
+	<Open_Interest>1182500</Open_Interest>
+	<Limit_for_Next_Day>16547584</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE423A01024</ISIN>
+	<Scrip_Name>ADANI ENTERPRISES LIMITED</Scrip_Name>
+	<NSE_Symbol>ADANIENT</NSE_Symbol>
+	<MWPL_Limit>54990504</MWPL_Limit>
+	<Open_Interest>12413500</Open_Interest>
+	<Limit_for_Next_Day>39827478</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE742F01042</ISIN>
+	<Scrip_Name>ADANI PORT & SEZ LTD</Scrip_Name>
+	<NSE_Symbol>ADANIPORTS</NSE_Symbol>
+	<MWPL_Limit>181154657</MWPL_Limit>
+	<Open_Interest>21079800</Open_Interest>
+	<Limit_for_Next_Day>151017124</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE814H01011</ISIN>
+	<Scrip_Name>ADANI POWER LTD</Scrip_Name>
+	<NSE_Symbol>ADANIPOWER</NSE_Symbol>
+	<MWPL_Limit>245854775</MWPL_Limit>
+	<Open_Interest>67092000</Open_Interest>
+	<Limit_for_Next_Day>166470036</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE031B01049</ISIN>
+	<Scrip_Name>AJANTA PHARMA LIMITED</Scrip_Name>
+	<NSE_Symbol>AJANTPHARM</NSE_Symbol>
+	<MWPL_Limit>4614298</MWPL_Limit>
+	<Open_Interest>565850</Open_Interest>
+	<Limit_for_Next_Day>3817733</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE428A01015</ISIN>
+	<Scrip_Name>ALLAHABAD BANK</Scrip_Name>
+	<NSE_Symbol>ALBK</NSE_Symbol>
+	<MWPL_Limit>44762154</MWPL_Limit>
+	<Open_Interest>9496000</Open_Interest>
+	<Limit_for_Next_Day>33028046</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE885A01032</ISIN>
+	<Scrip_Name>AMARA RAJA BATTERIES LTD.</Scrip_Name>
+	<NSE_Symbol>AMARAJABAT</NSE_Symbol>
+	<MWPL_Limit>16377009</MWPL_Limit>
+	<Open_Interest>810100</Open_Interest>
+	<Limit_for_Next_Day>14748058</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE079A01024</ISIN>
+	<Scrip_Name>AMBUJA CEMENTS LTD</Scrip_Name>
+	<NSE_Symbol>AMBUJACEM</NSE_Symbol>
+	<MWPL_Limit>147975551</MWPL_Limit>
+	<Open_Interest>10723600</Open_Interest>
+	<Limit_for_Next_Day>129853173</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE130C01021</ISIN>
+	<Scrip_Name>AMTEK AUTO LTD.</Scrip_Name>
+	<NSE_Symbol>AMTEKAUTO</NSE_Symbol>
+	<MWPL_Limit>22481055</MWPL_Limit>
+	<Open_Interest>7700000</Open_Interest>
+	<Limit_for_Next_Day>13657002</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE434A01013</ISIN>
+	<Scrip_Name>ANDHRA BANK</Scrip_Name>
+	<NSE_Symbol>ANDHRABANK</NSE_Symbol>
+	<MWPL_Limit>47000000</MWPL_Limit>
+	<Open_Interest>13200000</Open_Interest>
+	<Limit_for_Next_Day>31450000</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE437A01024</ISIN>
+	<Scrip_Name>APOLLO HOSPITALS ENTER. L</Scrip_Name>
+	<NSE_Symbol>APOLLOHOSP</NSE_Symbol>
+	<MWPL_Limit>18095256</MWPL_Limit>
+	<Open_Interest>693750</Open_Interest>
+	<Limit_for_Next_Day>16496743</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE438A01022</ISIN>
+	<Scrip_Name>APOLLO TYRES LTD</Scrip_Name>
+	<NSE_Symbol>APOLLOTYRE</NSE_Symbol>
+	<MWPL_Limit>56953405</MWPL_Limit>
+	<Open_Interest>10017000</Open_Interest>
+	<Limit_for_Next_Day>44088734</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE034A01011</ISIN>
+	<Scrip_Name>ARVIND LIMITED</Scrip_Name>
+	<NSE_Symbol>ARVIND</NSE_Symbol>
+	<MWPL_Limit>29036682</MWPL_Limit>
+	<Open_Interest>4989900</Open_Interest>
+	<Limit_for_Next_Day>22594947</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE208A01029</ISIN>
+	<Scrip_Name>ASHOK LEYLAND LTD</Scrip_Name>
+	<NSE_Symbol>ASHOKLEY</NSE_Symbol>
+	<MWPL_Limit>277796819</MWPL_Limit>
+	<Open_Interest>78367000</Open_Interest>
+	<Limit_for_Next_Day>185539978</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE021A01026</ISIN>
+	<Scrip_Name>ASIAN PAINTS LIMITED</Scrip_Name>
+	<NSE_Symbol>ASIANPAINT</NSE_Symbol>
+	<MWPL_Limit>90562661</MWPL_Limit>
+	<Open_Interest>3922150</Open_Interest>
+	<Limit_for_Next_Day>82112377</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE406A01037</ISIN>
+	<Scrip_Name>AUROBINDO PHARMA LTD</Scrip_Name>
+	<NSE_Symbol>AUROPHARMA</NSE_Symbol>
+	<MWPL_Limit>53822595</MWPL_Limit>
+	<Open_Interest>15272900</Open_Interest>
+	<Limit_for_Next_Day>35858565</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE238A01034</ISIN>
+	<Scrip_Name>AXIS BANK LIMITED</Scrip_Name>
+	<NSE_Symbol>AXISBANK</NSE_Symbol>
+	<MWPL_Limit>318232794</MWPL_Limit>
+	<Open_Interest>40589000</Open_Interest>
+	<Limit_for_Next_Day>261732154</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE917I01010</ISIN>
+	<Scrip_Name>BAJAJ AUTO LIMITED</Scrip_Name>
+	<NSE_Symbol>BAJAJ-AUTO</NSE_Symbol>
+	<MWPL_Limit>29363058</MWPL_Limit>
+	<Open_Interest>1811850</Open_Interest>
+	<Limit_for_Next_Day>26083055</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE296A01016</ISIN>
+	<Scrip_Name>BAJAJ FINANCE LIMITED</Scrip_Name>
+	<NSE_Symbol>BAJFINANCE</NSE_Symbol>
+	<MWPL_Limit>4547773</MWPL_Limit>
+	<Open_Interest>169000</Open_Interest>
+	<Limit_for_Next_Day>4151384</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE028A01039</ISIN>
+	<Scrip_Name>BANK OF BARODA</Scrip_Name>
+	<NSE_Symbol>BANKBARODA</NSE_Symbol>
+	<MWPL_Limit>187843804</MWPL_Limit>
+	<Open_Interest>36020900</Open_Interest>
+	<Limit_for_Next_Day>142430713</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE084A01016</ISIN>
+	<Scrip_Name>BANK OF INDIA</Scrip_Name>
+	<NSE_Symbol>BANKINDIA</NSE_Symbol>
+	<MWPL_Limit>42779100</MWPL_Limit>
+	<Open_Interest>14634000</Open_Interest>
+	<Limit_for_Next_Day>26006145</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE176A01010</ISIN>
+	<Scrip_Name>BATA INDIA LTD</Scrip_Name>
+	<NSE_Symbol>BATAINDIA</NSE_Symbol>
+	<MWPL_Limit>6046202</MWPL_Limit>
+	<Open_Interest>1000750</Open_Interest>
+	<Limit_for_Next_Day>4743141</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE263A01016</ISIN>
+	<Scrip_Name>BHARAT ELECTRONICS LTD</Scrip_Name>
+	<NSE_Symbol>BEL</NSE_Symbol>
+	<MWPL_Limit>11991474</MWPL_Limit>
+	<Open_Interest>2879925</Open_Interest>
+	<Limit_for_Next_Day>8511975</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE258A01016</ISIN>
+	<Scrip_Name>BEML LIMITED</Scrip_Name>
+	<NSE_Symbol>BEML</NSE_Symbol>
+	<MWPL_Limit>3828900</MWPL_Limit>
+	<Open_Interest>83500</Open_Interest>
+	<Limit_for_Next_Day>3553955</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE465A01025</ISIN>
+	<Scrip_Name>BHARAT FORGE LTD</Scrip_Name>
+	<NSE_Symbol>BHARATFORG</NSE_Symbol>
+	<MWPL_Limit>24793439</MWPL_Limit>
+	<Open_Interest>4414000</Open_Interest>
+	<Limit_for_Next_Day>19139767</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE397D01024</ISIN>
+	<Scrip_Name>BHARTI AIRTEL LIMITED</Scrip_Name>
+	<NSE_Symbol>BHARTIARTL</NSE_Symbol>
+	<MWPL_Limit>276222660</MWPL_Limit>
+	<Open_Interest>24728600</Open_Interest>
+	<Limit_for_Next_Day>237682927</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE257A01026</ISIN>
+	<Scrip_Name>BHEL</Scrip_Name>
+	<NSE_Symbol>BHEL</NSE_Symbol>
+	<MWPL_Limit>180829600</MWPL_Limit>
+	<Open_Interest>25451000</Open_Interest>
+	<Limit_for_Next_Day>146337120</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE376G01013</ISIN>
+	<Scrip_Name>BIOCON LIMITED.</Scrip_Name>
+	<NSE_Symbol>BIOCON</NSE_Symbol>
+	<MWPL_Limit>15590310</MWPL_Limit>
+	<Open_Interest>2823800</Open_Interest>
+	<Limit_for_Next_Day>11986994</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE323A01026</ISIN>
+	<Scrip_Name>BOSCH LIMITED</Scrip_Name>
+	<NSE_Symbol>BOSCHLTD</NSE_Symbol>
+	<MWPL_Limit>1809896</MWPL_Limit>
+	<Open_Interest>128275</Open_Interest>
+	<Limit_for_Next_Day>1591126</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE029A01011</ISIN>
+	<Scrip_Name>BHARAT PETROLEUM CORP  LT</Scrip_Name>
+	<NSE_Symbol>BPCL</NSE_Symbol>
+	<MWPL_Limit>65176825</MWPL_Limit>
+	<Open_Interest>6265900</Open_Interest>
+	<Limit_for_Next_Day>55652083</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE216A01022</ISIN>
+	<Scrip_Name>BRITANNIA INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>BRITANNIA</NSE_Symbol>
+	<MWPL_Limit>11820583</MWPL_Limit>
+	<Open_Interest>934125</Open_Interest>
+	<Limit_for_Next_Day>10295428</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE010B01019</ISIN>
+	<Scrip_Name>CADILA HEALTHCARE LIMITED</Scrip_Name>
+	<NSE_Symbol>CADILAHC</NSE_Symbol>
+	<MWPL_Limit>10322094</MWPL_Limit>
+	<Open_Interest>194100</Open_Interest>
+	<Limit_for_Next_Day>9611889</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE910H01017</ISIN>
+	<Scrip_Name>CAIRN INDIA LIMITED</Scrip_Name>
+	<NSE_Symbol>CAIRN</NSE_Symbol>
+	<MWPL_Limit>150427750</MWPL_Limit>
+	<Open_Interest>10811000</Open_Interest>
+	<Limit_for_Next_Day>132095362</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE476A01014</ISIN>
+	<Scrip_Name>CANARA BANK</Scrip_Name>
+	<NSE_Symbol>CANBK</NSE_Symbol>
+	<MWPL_Limit>28600000</MWPL_Limit>
+	<Open_Interest>10422000</Open_Interest>
+	<Limit_for_Next_Day>16748000</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE172A01027</ISIN>
+	<Scrip_Name>CASTROL INDIA LIMITED</Scrip_Name>
+	<NSE_Symbol>CASTROLIND</NSE_Symbol>
+	<MWPL_Limit>28653895</MWPL_Limit>
+	<Open_Interest>794400</Open_Interest>
+	<Limit_for_Next_Day>26426800</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE482A01020</ISIN>
+	<Scrip_Name>CEAT LIMITED</Scrip_Name>
+	<NSE_Symbol>CEATLTD</NSE_Symbol>
+	<MWPL_Limit>3983270</MWPL_Limit>
+	<Open_Interest>2101100</Open_Interest>
+	<Limit_for_Next_Day>1683006</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE055A01016</ISIN>
+	<Scrip_Name>CENTURY TEXTILES LTD</Scrip_Name>
+	<NSE_Symbol>CENTURYTEX</NSE_Symbol>
+	<MWPL_Limit>11121908</MWPL_Limit>
+	<Open_Interest>7954400</Open_Interest>
+	<Limit_for_Next_Day>2611412</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE486A01013</ISIN>
+	<Scrip_Name>CESC LTD</Scrip_Name>
+	<NSE_Symbol>CESC</NSE_Symbol>
+	<MWPL_Limit>13266244</MWPL_Limit>
+	<Open_Interest>1771500</Open_Interest>
+	<Limit_for_Next_Day>10831431</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE059A01026</ISIN>
+	<Scrip_Name>CIPLA LTD</Scrip_Name>
+	<NSE_Symbol>CIPLA</NSE_Symbol>
+	<MWPL_Limit>97803568</MWPL_Limit>
+	<Open_Interest>11074400</Open_Interest>
+	<Limit_for_Next_Day>81838989</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE522F01014</ISIN>
+	<Scrip_Name>COAL INDIA LTD</Scrip_Name>
+	<NSE_Symbol>COALINDIA</NSE_Symbol>
+	<MWPL_Limit>257078763</MWPL_Limit>
+	<Open_Interest>18506200</Open_Interest>
+	<Limit_for_Next_Day>225718624</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE259A01022</ISIN>
+	<Scrip_Name>COLGATE PALMOLIVE LTD.</Scrip_Name>
+	<NSE_Symbol>COLPAL</NSE_Symbol>
+	<MWPL_Limit>26654592</MWPL_Limit>
+	<Open_Interest>1912500</Open_Interest>
+	<Limit_for_Next_Day>23409362</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE067A01029</ISIN>
+	<Scrip_Name>CROMPTON GREAVES LTD</Scrip_Name>
+	<NSE_Symbol>CROMPGREAV</NSE_Symbol>
+	<MWPL_Limit>82064245</MWPL_Limit>
+	<Open_Interest>14970000</Open_Interest>
+	<Limit_for_Next_Day>62991032</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE016A01026</ISIN>
+	<Scrip_Name>DABUR INDIA LTD</Scrip_Name>
+	<NSE_Symbol>DABUR</NSE_Symbol>
+	<MWPL_Limit>111872097</MWPL_Limit>
+	<Open_Interest>3135000</Open_Interest>
+	<Limit_for_Next_Day>103143492</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE202B01012</ISIN>
+	<Scrip_Name>DEWAN HOUSING FIN CORP LT</Scrip_Name>
+	<NSE_Symbol>DHFL</NSE_Symbol>
+	<MWPL_Limit>37954012</MWPL_Limit>
+	<Open_Interest>5618000</Open_Interest>
+	<Limit_for_Next_Day>30438311</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE836F01026</ISIN>
+	<Scrip_Name>DISH TV INDIA LTD.</Scrip_Name>
+	<NSE_Symbol>DISHTV</NSE_Symbol>
+	<MWPL_Limit>75765889</MWPL_Limit>
+	<Open_Interest>49827000</Open_Interest>
+	<Limit_for_Next_Day>22150594</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE361B01024</ISIN>
+	<Scrip_Name>DIVI'S LABORATORIES LTD</Scrip_Name>
+	<NSE_Symbol>DIVISLAB</NSE_Symbol>
+	<MWPL_Limit>25441469</MWPL_Limit>
+	<Open_Interest>3255450</Open_Interest>
+	<Limit_for_Next_Day>20913945</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE271C01023</ISIN>
+	<Scrip_Name>DLF LIMITED</Scrip_Name>
+	<NSE_Symbol>DLF</NSE_Symbol>
+	<MWPL_Limit>89500455</MWPL_Limit>
+	<Open_Interest>47450000</Open_Interest>
+	<Limit_for_Next_Day>37575432</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE089A01023</ISIN>
+	<Scrip_Name>DR. REDDY'S LABORATORIES</Scrip_Name>
+	<NSE_Symbol>DRREDDY</NSE_Symbol>
+	<MWPL_Limit>19607329</MWPL_Limit>
+	<Open_Interest>1274650</Open_Interest>
+	<Limit_for_Next_Day>17352312</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE066A01013</ISIN>
+	<Scrip_Name>EICHER MOTORS LTD</Scrip_Name>
+	<NSE_Symbol>EICHERMOT</NSE_Symbol>
+	<MWPL_Limit>2447870</MWPL_Limit>
+	<Open_Interest>329300</Open_Interest>
+	<Limit_for_Next_Day>1996176</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE510A01028</ISIN>
+	<Scrip_Name>ENGINEERS INDIA LTD</Scrip_Name>
+	<NSE_Symbol>ENGINERSIN</NSE_Symbol>
+	<MWPL_Limit>20643537</MWPL_Limit>
+	<Open_Interest>1328200</Open_Interest>
+	<Limit_for_Next_Day>18283160</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE302A01020</ISIN>
+	<Scrip_Name>EXIDE INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>EXIDEIND</NSE_Symbol>
+	<MWPL_Limit>91809066</MWPL_Limit>
+	<Open_Interest>8349600</Open_Interest>
+	<Limit_for_Next_Day>78869012</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE171A01029</ISIN>
+	<Scrip_Name>FEDERAL BANK LTD</Scrip_Name>
+	<NSE_Symbol>FEDERALBNK</NSE_Symbol>
+	<MWPL_Limit>336741583</MWPL_Limit>
+	<Open_Interest>26512000</Open_Interest>
+	<Limit_for_Next_Day>293392503</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE129A01019</ISIN>
+	<Scrip_Name>GAIL (INDIA) LTD</Scrip_Name>
+	<NSE_Symbol>GAIL</NSE_Symbol>
+	<MWPL_Limit>108072127</MWPL_Limit>
+	<Open_Interest>9375200</Open_Interest>
+	<Limit_for_Next_Day>93293320</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE935A01035</ISIN>
+	<Scrip_Name>GLENMARK PHARMACEUTICALS</Scrip_Name>
+	<NSE_Symbol>GLENMARK</NSE_Symbol>
+	<MWPL_Limit>28031867</MWPL_Limit>
+	<Open_Interest>3316250</Open_Interest>
+	<Limit_for_Next_Day>23314023</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE776C01039</ISIN>
+	<Scrip_Name>GMR INFRASTRUCTURE LTD.</Scrip_Name>
+	<NSE_Symbol>GMRINFRA</NSE_Symbol>
+	<MWPL_Limit>396889523</MWPL_Limit>
+	<Open_Interest>139620000</Open_Interest>
+	<Limit_for_Next_Day>237425046</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE233A01035</ISIN>
+	<Scrip_Name>GODREJ INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>GODREJIND</NSE_Symbol>
+	<MWPL_Limit>16910665</MWPL_Limit>
+	<Open_Interest>2654100</Open_Interest>
+	<Limit_for_Next_Day>13411031</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE047A01013</ISIN>
+	<Scrip_Name>GRASIM INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>GRASIM</NSE_Symbol>
+	<MWPL_Limit>11102376</MWPL_Limit>
+	<Open_Interest>846125</Open_Interest>
+	<Limit_for_Next_Day>9701132</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE176B01034</ISIN>
+	<Scrip_Name>HAVELLS INDIA LIMITED</Scrip_Name>
+	<NSE_Symbol>HAVELLS</NSE_Symbol>
+	<MWPL_Limit>47829167</MWPL_Limit>
+	<Open_Interest>4168000</Open_Interest>
+	<Limit_for_Next_Day>41269708</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE860A01027</ISIN>
+	<Scrip_Name>HCL TECHNOLOGIES LTD</Scrip_Name>
+	<NSE_Symbol>HCLTECH</NSE_Symbol>
+	<MWPL_Limit>110851518</MWPL_Limit>
+	<Open_Interest>10030750</Open_Interest>
+	<Limit_for_Next_Day>95278192</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE001A01036</ISIN>
+	<Scrip_Name>HDFC LTD</Scrip_Name>
+	<NSE_Symbol>HDFC</NSE_Symbol>
+	<MWPL_Limit>315206121</MWPL_Limit>
+	<Open_Interest>12631950</Open_Interest>
+	<Limit_for_Next_Day>286813864</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE040A01026</ISIN>
+	<Scrip_Name>HDFC BANK LTD</Scrip_Name>
+	<NSE_Symbol>HDFCBANK</NSE_Symbol>
+	<MWPL_Limit>299047492</MWPL_Limit>
+	<Open_Interest>27683250</Open_Interest>
+	<Limit_for_Next_Day>256411867</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE191I01012</ISIN>
+	<Scrip_Name>HOUSING DEV & INFRA LTD</Scrip_Name>
+	<NSE_Symbol>HDIL</NSE_Symbol>
+	<MWPL_Limit>53497435</MWPL_Limit>
+	<Open_Interest>23140000</Open_Interest>
+	<Limit_for_Next_Day>27682563</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE158A01026</ISIN>
+	<Scrip_Name>HERO MOTOCORP LIMITED</Scrip_Name>
+	<NSE_Symbol>HEROMOTOCO</NSE_Symbol>
+	<MWPL_Limit>26104283</MWPL_Limit>
+	<Open_Interest>1351750</Open_Interest>
+	<Limit_for_Next_Day>23447318</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE093A01033</ISIN>
+	<Scrip_Name>HEXAWARE TECHNOLOGIES LTD</Scrip_Name>
+	<NSE_Symbol>HEXAWARE</NSE_Symbol>
+	<MWPL_Limit>17230293</MWPL_Limit>
+	<Open_Interest>3885000</Open_Interest>
+	<Limit_for_Next_Day>12483778</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE038A01020</ISIN>
+	<Scrip_Name>HINDALCO  INDUSTRIES  LTD</Scrip_Name>
+	<NSE_Symbol>HINDALCO</NSE_Symbol>
+	<MWPL_Limit>228583346</MWPL_Limit>
+	<Open_Interest>67169000</Open_Interest>
+	<Limit_for_Next_Day>149985178</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE094A01015</ISIN>
+	<Scrip_Name>HINDUSTAN PETROLEUM CORP</Scrip_Name>
+	<NSE_Symbol>HINDPETRO</NSE_Symbol>
+	<MWPL_Limit>33110100</MWPL_Limit>
+	<Open_Interest>9776300</Open_Interest>
+	<Limit_for_Next_Day>21678295</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE030A01027</ISIN>
+	<Scrip_Name>HINDUSTAN UNILEVER LTD.</Scrip_Name>
+	<NSE_Symbol>HINDUNILVR</NSE_Symbol>
+	<MWPL_Limit>141879944</MWPL_Limit>
+	<Open_Interest>4896350</Open_Interest>
+	<Limit_for_Next_Day>129889596</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE267A01025</ISIN>
+	<Scrip_Name>HINDUSTAN ZINC LIMITED</Scrip_Name>
+	<NSE_Symbol>HINDZINC</NSE_Symbol>
+	<MWPL_Limit>296432938</MWPL_Limit>
+	<Open_Interest>2116000</Open_Interest>
+	<Limit_for_Next_Day>279495291</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE069I01010</ISIN>
+	<Scrip_Name>INDIABULLS REAL EST. LTD</Scrip_Name>
+	<NSE_Symbol>IBREALEST</NSE_Symbol>
+	<MWPL_Limit>52809136</MWPL_Limit>
+	<Open_Interest>26393000</Open_Interest>
+	<Limit_for_Next_Day>23775679</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE148I01020</ISIN>
+	<Scrip_Name>INDIABULLS HSG FIN LTD</Scrip_Name>
+	<NSE_Symbol>IBULHSGFIN</NSE_Symbol>
+	<MWPL_Limit>63919934</MWPL_Limit>
+	<Open_Interest>5452400</Open_Interest>
+	<Limit_for_Next_Day>55271537</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE090A01021</ISIN>
+	<Scrip_Name>ICICI BANK LTD.</Scrip_Name>
+	<NSE_Symbol>ICICIBANK</NSE_Symbol>
+	<MWPL_Limit>823914522</MWPL_Limit>
+	<Open_Interest>69345400</Open_Interest>
+	<Limit_for_Next_Day>713373395</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE008A01015</ISIN>
+	<Scrip_Name>IDBI BANK LIMITED</Scrip_Name>
+	<NSE_Symbol>IDBI</NSE_Symbol>
+	<MWPL_Limit>75387796</MWPL_Limit>
+	<Open_Interest>49088000</Open_Interest>
+	<Limit_for_Next_Day>22530406</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE669E01016</ISIN>
+	<Scrip_Name>IDEA CELLULAR LIMITED</Scrip_Name>
+	<NSE_Symbol>IDEA</NSE_Symbol>
+	<MWPL_Limit>405238911</MWPL_Limit>
+	<Open_Interest>29218000</Open_Interest>
+	<Limit_for_Next_Day>355758965</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE043D01016</ISIN>
+	<Scrip_Name>IDFC LIMITED</Scrip_Name>
+	<NSE_Symbol>IDFC</NSE_Symbol>
+	<MWPL_Limit>318759991</MWPL_Limit>
+	<Open_Interest>50225900</Open_Interest>
+	<Limit_for_Next_Day>252596091</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE039A01010</ISIN>
+	<Scrip_Name>IFCI LTD</Scrip_Name>
+	<NSE_Symbol>IFCI</NSE_Symbol>
+	<MWPL_Limit>147807447</MWPL_Limit>
+	<Open_Interest>55888000</Open_Interest>
+	<Limit_for_Next_Day>84529074</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE203G01019</ISIN>
+	<Scrip_Name>INDRAPRASTHA GAS LTD</Scrip_Name>
+	<NSE_Symbol>IGL</NSE_Symbol>
+	<MWPL_Limit>15400016</MWPL_Limit>
+	<Open_Interest>1380700</Open_Interest>
+	<Limit_for_Next_Day>13249315</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE383A01012</ISIN>
+	<Scrip_Name>THE INDIA CEMENTS LIMITED</Scrip_Name>
+	<NSE_Symbol>INDIACEM</NSE_Symbol>
+	<MWPL_Limit>43358821</MWPL_Limit>
+	<Open_Interest>23030000</Open_Interest>
+	<Limit_for_Next_Day>18160879</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE095A01012</ISIN>
+	<Scrip_Name>INDUSIND BANK LIMITED</Scrip_Name>
+	<NSE_Symbol>INDUSINDBK</NSE_Symbol>
+	<MWPL_Limit>87566005</MWPL_Limit>
+	<Open_Interest>5376900</Open_Interest>
+	<Limit_for_Next_Day>77810804</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE121J01017</ISIN>
+	<Scrip_Name>BHARTI INFRATEL LTD.</Scrip_Name>
+	<NSE_Symbol>INFRATEL</NSE_Symbol>
+	<MWPL_Limit>107261427</MWPL_Limit>
+	<Open_Interest>1294800</Open_Interest>
+	<Limit_for_Next_Day>100603555</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE009A01021</ISIN>
+	<Scrip_Name>INFOSYS LIMITED</Scrip_Name>
+	<NSE_Symbol>INFY</NSE_Symbol>
+	<MWPL_Limit>322402424</MWPL_Limit>
+	<Open_Interest>15957500</Open_Interest>
+	<Limit_for_Next_Day>290324802</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE565A01014</ISIN>
+	<Scrip_Name>INDIAN OVERSEAS BANK</Scrip_Name>
+	<NSE_Symbol>IOB</NSE_Symbol>
+	<MWPL_Limit>64727493</MWPL_Limit>
+	<Open_Interest>10700000</Open_Interest>
+	<Limit_for_Next_Day>50791118</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE242A01010</ISIN>
+	<Scrip_Name>INDIAN OIL CORP LTD</Scrip_Name>
+	<NSE_Symbol>IOC</NSE_Symbol>
+	<MWPL_Limit>201160487</MWPL_Limit>
+	<Open_Interest>8238400</Open_Interest>
+	<Limit_for_Next_Day>182864062</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE821I01014</ISIN>
+	<Scrip_Name>IRB INFRA DEV LTD.</Scrip_Name>
+	<NSE_Symbol>IRB</NSE_Symbol>
+	<MWPL_Limit>29666439</MWPL_Limit>
+	<Open_Interest>5407000</Open_Interest>
+	<Limit_for_Next_Day>22776117</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE154A01025</ISIN>
+	<Scrip_Name>ITC LTD</Scrip_Name>
+	<NSE_Symbol>ITC</NSE_Symbol>
+	<MWPL_Limit>1599113955</MWPL_Limit>
+	<Open_Interest>33602800</Open_Interest>
+	<Limit_for_Next_Day>1485555457</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE749A01030</ISIN>
+	<Scrip_Name>JINDAL STEEL & POWER LTD</Scrip_Name>
+	<NSE_Symbol>JINDALSTEL</NSE_Symbol>
+	<MWPL_Limit>70732076</MWPL_Limit>
+	<Open_Interest>42007000</Open_Interest>
+	<Limit_for_Next_Day>25188472</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE175A01038</ISIN>
+	<Scrip_Name>JAIN IRRIGATION SYSTEMS</Scrip_Name>
+	<NSE_Symbol>JISLJALEQS</NSE_Symbol>
+	<MWPL_Limit>63089791</MWPL_Limit>
+	<Open_Interest>43900000</Open_Interest>
+	<Limit_for_Next_Day>16035301</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE455F01025</ISIN>
+	<Scrip_Name>JAIPRAKASH ASSOCIATES LTD</Scrip_Name>
+	<NSE_Symbol>JPASSOCIAT</NSE_Symbol>
+	<MWPL_Limit>294900826</MWPL_Limit>
+	<Open_Interest>178088000</Open_Interest>
+	<Limit_for_Next_Day>102067784</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE121E01018</ISIN>
+	<Scrip_Name>JSW ENERGY LIMITED</Scrip_Name>
+	<NSE_Symbol>JSWENERGY</NSE_Symbol>
+	<MWPL_Limit>82002830</MWPL_Limit>
+	<Open_Interest>6082000</Open_Interest>
+	<Limit_for_Next_Day>71820688</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE019A01020</ISIN>
+	<Scrip_Name>JSW STEEL LIMITED</Scrip_Name>
+	<NSE_Symbol>JSWSTEEL</NSE_Symbol>
+	<MWPL_Limit>28802043</MWPL_Limit>
+	<Open_Interest>10985350</Open_Interest>
+	<Limit_for_Next_Day>16376590</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE797F01012</ISIN>
+	<Scrip_Name>JUBILANT FOODWORKS LTD</Scrip_Name>
+	<NSE_Symbol>JUBLFOOD</NSE_Symbol>
+	<MWPL_Limit>6722549</MWPL_Limit>
+	<Open_Interest>1915600</Open_Interest>
+	<Limit_for_Next_Day>4470821</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE599M01018</ISIN>
+	<Scrip_Name>JUSTDIAL LTD.</Scrip_Name>
+	<NSE_Symbol>JUSTDIAL</NSE_Symbol>
+	<MWPL_Limit>9501982</MWPL_Limit>
+	<Open_Interest>1381500</Open_Interest>
+	<Limit_for_Next_Day>7645382</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE237A01028</ISIN>
+	<Scrip_Name>KOTAK MAHINDRA BANK LTD</Scrip_Name>
+	<NSE_Symbol>KOTAKBANK</NSE_Symbol>
+	<MWPL_Limit>217747611</MWPL_Limit>
+	<Open_Interest>10005200</Open_Interest>
+	<Limit_for_Next_Day>196855030</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE455I01029</ISIN>
+	<Scrip_Name>KAVERI SEED CO. LTD.</Scrip_Name>
+	<NSE_Symbol>KSCL</NSE_Symbol>
+	<MWPL_Limit>5971389</MWPL_Limit>
+	<Open_Interest>1306750</Open_Interest>
+	<Limit_for_Next_Day>4366069</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE614B01018</ISIN>
+	<Scrip_Name>KARNATAKA BANK LIMITED</Scrip_Name>
+	<NSE_Symbol>KTKBANK</NSE_Symbol>
+	<MWPL_Limit>37689851</MWPL_Limit>
+	<Open_Interest>16112000</Open_Interest>
+	<Limit_for_Next_Day>19693358</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE498L01015</ISIN>
+	<Scrip_Name>L&T FINANCE HOLDINGS LTD</Scrip_Name>
+	<NSE_Symbol>L&TFH</NSE_Symbol>
+	<MWPL_Limit>93152660</MWPL_Limit>
+	<Open_Interest>33420000</Open_Interest>
+	<Limit_for_Next_Day>55075027</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE115A01026</ISIN>
+	<Scrip_Name>LIC HOUSING FINANCE LTD</Scrip_Name>
+	<NSE_Symbol>LICHSGFIN</NSE_Symbol>
+	<MWPL_Limit>59783388</MWPL_Limit>
+	<Open_Interest>11178400</Open_Interest>
+	<Limit_for_Next_Day>45615818</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE018A01030</ISIN>
+	<Scrip_Name>LARSEN & TOUBRO LTD.</Scrip_Name>
+	<NSE_Symbol>LT</NSE_Symbol>
+	<MWPL_Limit>159290852</MWPL_Limit>
+	<Open_Interest>9656800</Open_Interest>
+	<Limit_for_Next_Day>141669509</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE326A01037</ISIN>
+	<Scrip_Name>LUPIN LIMITED</Scrip_Name>
+	<NSE_Symbol>LUPIN</NSE_Symbol>
+	<MWPL_Limit>48055960</MWPL_Limit>
+	<Open_Interest>3821450</Open_Interest>
+	<Limit_for_Next_Day>41831712</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE101A01026</ISIN>
+	<Scrip_Name>MAHINDRA & MAHINDRA LTD</Scrip_Name>
+	<NSE_Symbol>M&M</NSE_Symbol>
+	<MWPL_Limit>85469920</MWPL_Limit>
+	<Open_Interest>4535100</Open_Interest>
+	<Limit_for_Next_Day>76661324</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE774D01024</ISIN>
+	<Scrip_Name>M&M FIN. SERVICES LTD</Scrip_Name>
+	<NSE_Symbol>M&MFIN</NSE_Symbol>
+	<MWPL_Limit>54593049</MWPL_Limit>
+	<Open_Interest>9908000</Open_Interest>
+	<Limit_for_Next_Day>41955396</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE196A01026</ISIN>
+	<Scrip_Name>MARICO LIMITED</Scrip_Name>
+	<NSE_Symbol>MARICO</NSE_Symbol>
+	<MWPL_Limit>52031575</MWPL_Limit>
+	<Open_Interest>487500</Open_Interest>
+	<Limit_for_Next_Day>48942496</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE585B01010</ISIN>
+	<Scrip_Name>MARUTI SUZUKI INDIA LTD.</Scrip_Name>
+	<NSE_Symbol>MARUTI</NSE_Symbol>
+	<MWPL_Limit>26458324</MWPL_Limit>
+	<Open_Interest>3383000</Open_Interest>
+	<Limit_for_Next_Day>21752407</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE942G01012</ISIN>
+	<Scrip_Name>MCLEOD RUSSEL INDIA LTD.</Scrip_Name>
+	<NSE_Symbol>MCLEODRUSS</NSE_Symbol>
+	<MWPL_Limit>11877544</MWPL_Limit>
+	<Open_Interest>3022400</Open_Interest>
+	<Limit_for_Next_Day>8261266</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE018I01017</ISIN>
+	<Scrip_Name>MINDTREE LIMITED</Scrip_Name>
+	<NSE_Symbol>MINDTREE</NSE_Symbol>
+	<MWPL_Limit>14445426</MWPL_Limit>
+	<Open_Interest>334550</Open_Interest>
+	<Limit_for_Next_Day>13388604</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE775A01035</ISIN>
+	<Scrip_Name>MOTHERSON SUMI SYSTEMS LT</Scrip_Name>
+	<NSE_Symbol>MOTHERSUMI</NSE_Symbol>
+	<MWPL_Limit>91032917</MWPL_Limit>
+	<Open_Interest>13445250</Open_Interest>
+	<Limit_for_Next_Day>73036021</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE883A01011</ISIN>
+	<Scrip_Name>MRF LTD</Scrip_Name>
+	<NSE_Symbol>MRF</NSE_Symbol>
+	<MWPL_Limit>616329</MWPL_Limit>
+	<Open_Interest>38985</Open_Interest>
+	<Limit_for_Next_Day>546527</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE868B01028</ISIN>
+	<Scrip_Name>NCC LIMITED</Scrip_Name>
+	<NSE_Symbol>NCC</NSE_Symbol>
+	<MWPL_Limit>88178817</MWPL_Limit>
+	<Open_Interest>3976000</Open_Interest>
+	<Limit_for_Next_Day>79793876</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE848E01016</ISIN>
+	<Scrip_Name>NHPC LTD</Scrip_Name>
+	<NSE_Symbol>NHPC</NSE_Symbol>
+	<MWPL_Limit>310891754</MWPL_Limit>
+	<Open_Interest>39553000</Open_Interest>
+	<Limit_for_Next_Day>255794166</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE584A01023</ISIN>
+	<Scrip_Name>NMDC LTD.</Scrip_Name>
+	<NSE_Symbol>NMDC</NSE_Symbol>
+	<MWPL_Limit>158553940</MWPL_Limit>
+	<Open_Interest>12510000</Open_Interest>
+	<Limit_for_Next_Day>138116243</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE733E01010</ISIN>
+	<Scrip_Name>NTPC LTD</Scrip_Name>
+	<NSE_Symbol>NTPC</NSE_Symbol>
+	<MWPL_Limit>412969884</MWPL_Limit>
+	<Open_Interest>27398000</Open_Interest>
+	<Limit_for_Next_Day>364923389</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE881D01027</ISIN>
+	<Scrip_Name>ORACLE FIN SERV SOFT LTD.</Scrip_Name>
+	<NSE_Symbol>OFSS</NSE_Symbol>
+	<MWPL_Limit>4315863</MWPL_Limit>
+	<Open_Interest>229800</Open_Interest>
+	<Limit_for_Next_Day>3870269</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE274J01014</ISIN>
+	<Scrip_Name>OIL INDIA LTD</Scrip_Name>
+	<NSE_Symbol>OIL</NSE_Symbol>
+	<MWPL_Limit>38903089</MWPL_Limit>
+	<Open_Interest>1128500</Open_Interest>
+	<Limit_for_Next_Day>35829434</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE213A01029</ISIN>
+	<Scrip_Name>OIL AND NATURAL GAS CORP.</Scrip_Name>
+	<NSE_Symbol>ONGC</NSE_Symbol>
+	<MWPL_Limit>531562772</MWPL_Limit>
+	<Open_Interest>25794000</Open_Interest>
+	<Limit_for_Next_Day>479190633</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE141A01014</ISIN>
+	<Scrip_Name>ORIENTAL BANK OF COMMERCE</Scrip_Name>
+	<NSE_Symbol>ORIENTBANK</NSE_Symbol>
+	<MWPL_Limit>24507940</MWPL_Limit>
+	<Open_Interest>9476000</Open_Interest>
+	<Limit_for_Next_Day>13806543</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE761H01022</ISIN>
+	<Scrip_Name>PAGE INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>PAGEIND</NSE_Symbol>
+	<MWPL_Limit>1093017</MWPL_Limit>
+	<Open_Interest>40925</Open_Interest>
+	<Limit_for_Next_Day>997441</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE347G01014</ISIN>
+	<Scrip_Name>PETRONET LNG LIMITED</Scrip_Name>
+	<NSE_Symbol>PETRONET</NSE_Symbol>
+	<MWPL_Limit>75000008</MWPL_Limit>
+	<Open_Interest>4343000</Open_Interest>
+	<Limit_for_Next_Day>66907007</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE134E01011</ISIN>
+	<Scrip_Name>POWER FIN CORP LTD.</Scrip_Name>
+	<NSE_Symbol>PFC</NSE_Symbol>
+	<MWPL_Limit>71822860</MWPL_Limit>
+	<Open_Interest>9402000</Open_Interest>
+	<Limit_for_Next_Day>58829717</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE318A01026</ISIN>
+	<Scrip_Name>PIDILITE INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>PIDILITIND</NSE_Symbol>
+	<MWPL_Limit>31027806</MWPL_Limit>
+	<Open_Interest>651000</Open_Interest>
+	<Limit_for_Next_Day>28825415</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE160A01022</ISIN>
+	<Scrip_Name>PUNJAB NATIONAL BANK</Scrip_Name>
+	<NSE_Symbol>PNB</NSE_Symbol>
+	<MWPL_Limit>148901807</MWPL_Limit>
+	<Open_Interest>23472000</Open_Interest>
+	<Limit_for_Next_Day>117984716</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE752E01010</ISIN>
+	<Scrip_Name>POWER GRID CORP. LTD.</Scrip_Name>
+	<NSE_Symbol>POWERGRID</NSE_Symbol>
+	<MWPL_Limit>440550890</MWPL_Limit>
+	<Open_Interest>18388000</Open_Interest>
+	<Limit_for_Next_Day>400135345</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE877F01012</ISIN>
+	<Scrip_Name>PTC INDIA LIMITED</Scrip_Name>
+	<NSE_Symbol>PTC</NSE_Symbol>
+	<MWPL_Limit>49601664</MWPL_Limit>
+	<Open_Interest>15964000</Open_Interest>
+	<Limit_for_Next_Day>31157580</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE330H01018</ISIN>
+	<Scrip_Name>RELIANCE COMMUNICATIONS L</Scrip_Name>
+	<NSE_Symbol>RCOM</NSE_Symbol>
+	<MWPL_Limit>198868424</MWPL_Limit>
+	<Open_Interest>55280000</Open_Interest>
+	<Limit_for_Next_Day>133645002</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE020B01018</ISIN>
+	<Scrip_Name>RURAL ELEC CORP. LTD.</Scrip_Name>
+	<NSE_Symbol>RECLTD</NSE_Symbol>
+	<MWPL_Limit>77738264</MWPL_Limit>
+	<Open_Interest>13213000</Open_Interest>
+	<Limit_for_Next_Day>60638350</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE013A01015</ISIN>
+	<Scrip_Name>RELIANCE CAPITAL LTD</Scrip_Name>
+	<NSE_Symbol>RELCAPITAL</NSE_Symbol>
+	<MWPL_Limit>22405737</MWPL_Limit>
+	<Open_Interest>10922000</Open_Interest>
+	<Limit_for_Next_Day>10363450</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE002A01018</ISIN>
+	<Scrip_Name>RELIANCE INDUSTRIES LTD</Scrip_Name>
+	<NSE_Symbol>RELIANCE</NSE_Symbol>
+	<MWPL_Limit>333497257</MWPL_Limit>
+	<Open_Interest>32989250</Open_Interest>
+	<Limit_for_Next_Day>283833144</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE036A01016</ISIN>
+	<Scrip_Name>RELIANCE INFRASTRUCTU LTD</Scrip_Name>
+	<NSE_Symbol>RELINFRA</NSE_Symbol>
+	<MWPL_Limit>25905123</MWPL_Limit>
+	<Open_Interest>8374500</Open_Interest>
+	<Limit_for_Next_Day>16235366</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE614G01033</ISIN>
+	<Scrip_Name>RELIANCE POWER LTD.</Scrip_Name>
+	<NSE_Symbol>RPOWER</NSE_Symbol>
+	<MWPL_Limit>140226953</MWPL_Limit>
+	<Open_Interest>53084000</Open_Interest>
+	<Limit_for_Next_Day>80131605</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE114A01011</ISIN>
+	<Scrip_Name>STEEL AUTHORITY OF INDIA</Scrip_Name>
+	<NSE_Symbol>SAIL</NSE_Symbol>
+	<MWPL_Limit>206522041</MWPL_Limit>
+	<Open_Interest>37468000</Open_Interest>
+	<Limit_for_Next_Day>158727938</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE062A01020</ISIN>
+	<Scrip_Name>STATE BANK OF INDIA</Scrip_Name>
+	<NSE_Symbol>SBIN</NSE_Symbol>
+	<MWPL_Limit>587238934</MWPL_Limit>
+	<Open_Interest>81001000</Open_Interest>
+	<Limit_for_Next_Day>476875987</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE003A01024</ISIN>
+	<Scrip_Name>SIEMENS LTD</Scrip_Name>
+	<NSE_Symbol>SIEMENS</NSE_Symbol>
+	<MWPL_Limit>17806056</MWPL_Limit>
+	<Open_Interest>1410600</Open_Interest>
+	<Limit_for_Next_Day>15505153</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE180K01011</ISIN>
+	<Scrip_Name>SKS MICROFINANCE LTD</Scrip_Name>
+	<NSE_Symbol>SKSMICRO</NSE_Symbol>
+	<MWPL_Limit>22956174</MWPL_Limit>
+	<Open_Interest>8116000</Open_Interest>
+	<Limit_for_Next_Day>13692365</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE683A01023</ISIN>
+	<Scrip_Name>THE SOUTH INDIAN BANK LTD</Scrip_Name>
+	<NSE_Symbol>SOUTHBANK</NSE_Symbol>
+	<MWPL_Limit>269212942</MWPL_Limit>
+	<Open_Interest>16196000</Open_Interest>
+	<Limit_for_Next_Day>239556294</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE647A01010</ISIN>
+	<Scrip_Name>SRF LTD</Scrip_Name>
+	<NSE_Symbol>SRF</NSE_Symbol>
+	<MWPL_Limit>5469000</MWPL_Limit>
+	<Open_Interest>1000050</Open_Interest>
+	<Limit_for_Next_Day>4195500</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE721A01013</ISIN>
+	<Scrip_Name>SHRIRAM TRANSPORT FIN CO.</Scrip_Name>
+	<NSE_Symbol>SRTRANSFIN</NSE_Symbol>
+	<MWPL_Limit>33555914</MWPL_Limit>
+	<Open_Interest>1803600</Open_Interest>
+	<Limit_for_Next_Day>30074518</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE939A01011</ISIN>
+	<Scrip_Name>STRIDES ARCOLAB LIMITED</Scrip_Name>
+	<NSE_Symbol>STAR</NSE_Symbol>
+	<MWPL_Limit>8628283</MWPL_Limit>
+	<Open_Interest>2160700</Open_Interest>
+	<Limit_for_Next_Day>6036168</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE044A01036</ISIN>
+	<Scrip_Name>SUN PHARMACEUTICALS IND.</Scrip_Name>
+	<NSE_Symbol>SUNPHARMA</NSE_Symbol>
+	<MWPL_Limit>217985389</MWPL_Limit>
+	<Open_Interest>10938800</Open_Interest>
+	<Limit_for_Next_Day>196147319</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE424H01027</ISIN>
+	<Scrip_Name>SUN TV NETWORK LIMITED</Scrip_Name>
+	<NSE_Symbol>SUNTV</NSE_Symbol>
+	<MWPL_Limit>19704232</MWPL_Limit>
+	<Open_Interest>11413500</Open_Interest>
+	<Limit_for_Next_Day>7305520</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE667A01018</ISIN>
+	<Scrip_Name>SYNDICATE BANK</Scrip_Name>
+	<NSE_Symbol>SYNDIBANK</NSE_Symbol>
+	<MWPL_Limit>40732856</MWPL_Limit>
+	<Open_Interest>10309000</Open_Interest>
+	<Limit_for_Next_Day>28387213</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE092A01019</ISIN>
+	<Scrip_Name>TATA CHEMICALS LTD</Scrip_Name>
+	<NSE_Symbol>TATACHEM</NSE_Symbol>
+	<MWPL_Limit>35166084</MWPL_Limit>
+	<Open_Interest>4759900</Open_Interest>
+	<Limit_for_Next_Day>28647879</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE151A01013</ISIN>
+	<Scrip_Name>TATA COMMUNICATIONS LTD</Scrip_Name>
+	<NSE_Symbol>TATACOMM</NSE_Symbol>
+	<MWPL_Limit>14253357</MWPL_Limit>
+	<Open_Interest>3451900</Open_Interest>
+	<Limit_for_Next_Day>10088789</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE192A01025</ISIN>
+	<Scrip_Name>TATA GLOBAL BEVERAGES LTD</Scrip_Name>
+	<NSE_Symbol>TATAGLOBAL</NSE_Symbol>
+	<MWPL_Limit>78095384</MWPL_Limit>
+	<Open_Interest>24354000</Open_Interest>
+	<Limit_for_Next_Day>49836614</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE155A01022</ISIN>
+	<Scrip_Name>TATA MOTORS LIMITED</Scrip_Name>
+	<NSE_Symbol>TATAMOTORS</NSE_Symbol>
+	<MWPL_Limit>255565215</MWPL_Limit>
+	<Open_Interest>48787500</Open_Interest>
+	<Limit_for_Next_Day>193999454</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>IN9155A01020</ISIN>
+	<Scrip_Name>TATA MOTORS DVR 'A' ORD</Scrip_Name>
+	<NSE_Symbol>TATAMTRDVR</NSE_Symbol>
+	<MWPL_Limit>101172336</MWPL_Limit>
+	<Open_Interest>20043800</Open_Interest>
+	<Limit_for_Next_Day>76069919</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE245A01021</ISIN>
+	<Scrip_Name>TATA POWER CO LTD</Scrip_Name>
+	<NSE_Symbol>TATAPOWER</NSE_Symbol>
+	<MWPL_Limit>361494646</MWPL_Limit>
+	<Open_Interest>24368000</Open_Interest>
+	<Limit_for_Next_Day>319051913</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE081A01012</ISIN>
+	<Scrip_Name>TATA STEEL LIMITED</Scrip_Name>
+	<NSE_Symbol>TATASTEEL</NSE_Symbol>
+	<MWPL_Limit>129482929</MWPL_Limit>
+	<Open_Interest>44846000</Open_Interest>
+	<Limit_for_Next_Day>78162782</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE467B01029</ISIN>
+	<Scrip_Name>TATA CONSULTANCY SERV LT</Scrip_Name>
+	<NSE_Symbol>TCS</NSE_Symbol>
+	<MWPL_Limit>102394573</MWPL_Limit>
+	<Open_Interest>4445800</Open_Interest>
+	<Limit_for_Next_Day>92829044</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE669C01036</ISIN>
+	<Scrip_Name>TECH MAHINDRA LIMITED</Scrip_Name>
+	<NSE_Symbol>TECHM</NSE_Symbol>
+	<MWPL_Limit>121769957</MWPL_Limit>
+	<Open_Interest>10015500</Open_Interest>
+	<Limit_for_Next_Day>105665959</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE280A01028</ISIN>
+	<Scrip_Name>TITAN COMPANY LIMITED</Scrip_Name>
+	<NSE_Symbol>TITAN</NSE_Symbol>
+	<MWPL_Limit>83355648</MWPL_Limit>
+	<Open_Interest>10625500</Open_Interest>
+	<Limit_for_Next_Day>68562365</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE886H01027</ISIN>
+	<Scrip_Name>TV18 BROADCAST LIMITED</Scrip_Name>
+	<NSE_Symbol>TV18BRDCST</NSE_Symbol>
+	<MWPL_Limit>135768011</MWPL_Limit>
+	<Open_Interest>9367000</Open_Interest>
+	<Limit_for_Next_Day>119612610</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE494B01023</ISIN>
+	<Scrip_Name>TVS MOTOR COMPANY  LTD</Scrip_Name>
+	<NSE_Symbol>TVSMOTOR</NSE_Symbol>
+	<MWPL_Limit>40480865</MWPL_Limit>
+	<Open_Interest>4994000</Open_Interest>
+	<Limit_for_Next_Day>33462821</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE686F01025</ISIN>
+	<Scrip_Name>UNITED BREWERIES LTD</Scrip_Name>
+	<NSE_Symbol>UBL</NSE_Symbol>
+	<MWPL_Limit>13314095</MWPL_Limit>
+	<Open_Interest>815750</Open_Interest>
+	<Limit_for_Next_Day>11832640</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE691A01018</ISIN>
+	<Scrip_Name>UCO BANK</Scrip_Name>
+	<NSE_Symbol>UCOBANK</NSE_Symbol>
+	<MWPL_Limit>46275174</MWPL_Limit>
+	<Open_Interest>12214000</Open_Interest>
+	<Limit_for_Next_Day>31747415</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE481G01011</ISIN>
+	<Scrip_Name>ULTRATECH CEMENT LIMITED</Scrip_Name>
+	<NSE_Symbol>ULTRACEMCO</NSE_Symbol>
+	<MWPL_Limit>20065477</MWPL_Limit>
+	<Open_Interest>1394450</Open_Interest>
+	<Limit_for_Next_Day>17667753</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE692A01016</ISIN>
+	<Scrip_Name>UNION BANK OF INDIA</Scrip_Name>
+	<NSE_Symbol>UNIONBANK</NSE_Symbol>
+	<MWPL_Limit>50266904</MWPL_Limit>
+	<Open_Interest>13381000</Open_Interest>
+	<Limit_for_Next_Day>34372558</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE694A01020</ISIN>
+	<Scrip_Name>UNITECH LTD</Scrip_Name>
+	<NSE_Symbol>UNITECH</NSE_Symbol>
+	<MWPL_Limit>352628383</MWPL_Limit>
+	<Open_Interest>202268000</Open_Interest>
+	<Limit_for_Next_Day>132728963</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE628A01036</ISIN>
+	<Scrip_Name>UPL LIMITED</Scrip_Name>
+	<NSE_Symbol>UPL</NSE_Symbol>
+	<MWPL_Limit>60123762</MWPL_Limit>
+	<Open_Interest>6872500</Open_Interest>
+	<Limit_for_Next_Day>50245073</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE205A01025</ISIN>
+	<Scrip_Name>VEDANTA LIMITED</Scrip_Name>
+	<NSE_Symbol>VEDL</NSE_Symbol>
+	<MWPL_Limit>195437126</MWPL_Limit>
+	<Open_Interest>52790000</Open_Interest>
+	<Limit_for_Next_Day>132875269</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE226A01021</ISIN>
+	<Scrip_Name>VOLTAS LTD</Scrip_Name>
+	<NSE_Symbol>VOLTAS</NSE_Symbol>
+	<MWPL_Limit>46126252</MWPL_Limit>
+	<Open_Interest>5547000</Open_Interest>
+	<Limit_for_Next_Day>38272939</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE075A01022</ISIN>
+	<Scrip_Name>WIPRO LTD</Scrip_Name>
+	<NSE_Symbol>WIPRO</NSE_Symbol>
+	<MWPL_Limit>121787515</MWPL_Limit>
+	<Open_Interest>7043500</Open_Interest>
+	<Limit_for_Next_Day>108654639</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE049B01025</ISIN>
+	<Scrip_Name>WOCKHARDT LIMITED</Scrip_Name>
+	<NSE_Symbol>WOCKPHARMA</NSE_Symbol>
+	<MWPL_Limit>5615132</MWPL_Limit>
+	<Open_Interest>3574875</Open_Interest>
+	<Limit_for_Next_Day>1759500</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE528G01019</ISIN>
+	<Scrip_Name>YES BANK LIMITED</Scrip_Name>
+	<NSE_Symbol>YESBANK</NSE_Symbol>
+	<MWPL_Limit>65193050</MWPL_Limit>
+	<Open_Interest>15839150</Open_Interest>
+	<Limit_for_Next_Day>46094247</Limit_for_Next_Day>
+</MWPL>
+<MWPL>
+	<Date>01-OCT-2015</Date>
+	<ISIN>INE256A01028</ISIN>
+	<Scrip_Name>ZEE ENTERTAINMENT ENT LTD</Scrip_Name>
+	<NSE_Symbol>ZEEL</NSE_Symbol>
+	<MWPL_Limit>109355701</MWPL_Limit>
+	<Open_Interest>7107100</Open_Interest>
+	<Limit_for_Next_Day>96780815</Limit_for_Next_Day>
+</MWPL>
+</MWPL_Viols>

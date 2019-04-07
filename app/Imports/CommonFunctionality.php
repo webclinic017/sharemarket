@@ -21,9 +21,9 @@ class CommonFunctionality
         $frmToDates = [];
         $fdResult = \DB::table($tableName)->latest('date')->first();
         $currDate = date('Y-m-d');
-        if (isset($fdResult->date) && $currDate == $fdResult->date)
+        if (isset($fdResult->date) && $currDate == $fdResult->date) {
             return false;
-
+        }
 
         if (isset($fdResult->date) && $fdResult->date) {
             $fromDate = new \DateTime($fdResult->date);
@@ -35,5 +35,11 @@ class CommonFunctionality
         $toDate = new \DateTime();
         $frmToDates = ['fromDate' => $fromDate, 'toDate' => $toDate];
         return $frmToDates;
+    }
+
+    public function convertExpiryToDateFormat($date)
+    {
+        $expiryDate = date('Y-m-d', strtotime($date));
+        return $expiryDate;
     }
 }

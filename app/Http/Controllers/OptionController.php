@@ -17,6 +17,7 @@ class OptionController extends Controller
 
     public function optionDataFetch()
     {
+        dd($this->od->fnoStocksExpiry());
         $optionType = ['OPTIDX', 'OPTSTK'];
         $symbol = 'NIFTY';
         $expiryDate = '25APR2019';
@@ -27,6 +28,8 @@ class OptionController extends Controller
 
     public function stockOptionChain()
     {
-        $this->od->fnoStocksExpiry();
+        $underlyingExpiries = $this->od->stockOptionData();
+
+        //$this->od->optionChainExpiry($underlyingExpiries);
     }
 }

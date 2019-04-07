@@ -14,8 +14,8 @@ class CreateDateinsertReport extends Migration
     public function up()
     {
         Schema::create('dateinsert_report', function (Blueprint $table) {
-          $table->string('report');
-          $table->date('date');
+            $table->string('report');
+            $table->date('date');
         });
     }
 

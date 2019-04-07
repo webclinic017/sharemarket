@@ -20,18 +20,18 @@ class ShareInfo extends Model
             } else {
                 $dateOfOI = $from->format('d') . $from->format('m') . $from->format('Y');
                 $dataDelivery = $this->oiDetail($dateOfOI);
-               // dd($dateOfOI,$dataDelivery);
+                // dd($dateOfOI,$dataDelivery);
                 if ($dataDelivery) {
                     $oiDataPull = $this->oiDataPull($dateOfOI);
                     $oiDataStore = $this->oiDataStructure($oiDataPull, $from);
                     //dd($from,$dataDelivery,$oiDataPull,$oiDataStore);
                     $yn = false;
-                    if(isset($oiDataStore[0]) && count($oiDataStore) > 1) {
-                      $yn = $this->insertData($oiDataStore);
-                      if ($yn) {
-                          $DelDate = $from->format('Y-m-d');
-                          $yn = \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
-                      }
+                    if (isset($oiDataStore[0]) && count($oiDataStore) > 1) {
+                        $yn = $this->insertData($oiDataStore);
+                        if ($yn) {
+                            $DelDate = $from->format('Y-m-d');
+                            $yn = \DB::table('dateinsert_report')->insert(['report' => '4', 'date' => $DelDate]);
+                        }
                     }
                 }
                 $from = $from->modify('+1 day');
@@ -70,8 +70,8 @@ class ShareInfo extends Model
 
     public function oiDataPull($date)
     {
-        $path = public_path()."/extract-here/combineoi_$date.csv";
-        $pathXml = public_path()."/extract-here/combineoi_$date.xml";
+        $path = public_path() . "/extract-here/combineoi_$date.csv";
+        $pathXml = public_path() . "/extract-here/combineoi_$date.xml";
         $fileN = @fopen($path, 'r+');
         //dd($path,$fileN,$date);
         $oi = array();

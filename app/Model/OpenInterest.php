@@ -31,14 +31,8 @@ class OpenInterest extends Model
 
     public function getLatestDate()
     {
-<<<<<<< HEAD
-        $avgOI = \DB::select("select avg(open_interest) open_interest,symbol from (SELECT open_interest,symbol,date FROM
-                          share.oi_data where (date > DATE_SUB(curdate(), INTERVAL $day DAY) and date < '".$latestDate."'))  x group by symbol");
-        return $avgOI;
-=======
         $latestDate = $this::latest('date')->first(['date']);
         return $latestDate->date;
->>>>>>> dd1e37ef23f1599e959a69f1447075aa4ea9c136
     }
 
     /**

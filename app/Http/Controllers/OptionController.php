@@ -21,6 +21,7 @@ class OptionController extends Controller
         $symbol = 'NIFTY';
         $expiryDate = '25APR2019';
         $url = "https://www.nseindia.com/live_market/dynaContent/live_watch/option_chain/optionKeys.jsp?segmentLink=&instrument=$optionType[0]&symbol=$symbol&date=$expiryDate";
+        //dd($url);
         $data = $this->od->optionDataFetch($url);
         dd($data);
     }

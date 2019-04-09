@@ -32,7 +32,7 @@ class OpenInterest extends Model
     public function avgOIPerDay($day,$latestDate)
     {
         $avgOI = \DB::select("select avg(open_interest) open_interest,symbol from (SELECT open_interest,symbol,date FROM
-                          share.oi_data where (date > DATE_SUB(curdate(), INTERVAL $day DAY) and date < '$latestDate'))  x group by symbol");
+                          share.oi_data where (date > DATE_SUB(curdate(), INTERVAL $day DAY) and date < '".$latestDate."'))  x group by symbol");
         return $avgOI;
     }
 
@@ -44,9 +44,9 @@ class OpenInterest extends Model
     {
         $latestData = $this::select('id','date', 'open_interest', 'symbol')
             ->where('date', $latestDate)
+            ->orderBy('symbol')
             ->get()
             ->toArray();
-
         return $latestData;
     }
 
@@ -60,8 +60,9 @@ class OpenInterest extends Model
     {
         $j = 0;
         $finalList = [];
+
         foreach ($curOi as $keyCurOi => $valCurOi) {
-            //dd($keyCurOi, $valCurOi, $avgOi[$keyCurOi]->symbol);
+          //  dd($keyCurOi, $valCurOi, $avgOi[$keyCurOi]);
             if (isset($valCurOi['symbol'], $avgOi[$keyCurOi]->symbol) && $valCurOi['symbol'] === $avgOi[$keyCurOi]->symbol) {
                 if ($valCurOi['open_interest'] > $avgOi[$keyCurOi]->open_interest) {
                     $finalList[$j]['id'] = $valCurOi['id'];
@@ -73,6 +74,7 @@ class OpenInterest extends Model
                 }
             }
         }
+      //  dd($finalList);
         return $finalList;
     }
 

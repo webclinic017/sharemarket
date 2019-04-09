@@ -22,14 +22,16 @@ class OptionData extends Model
         //dd($this->fnoStocksExpiry());
         $data = $this->shareImp->get($url);
         $dataById = $this->shareImp->findTag('tr');
+        $dummy = $finalData = [];
         foreach ($dataById as $tag) {
             $searchChar = ["\t\r", "\r", "\t", " ", "Chart"];
             $dummy[] = str_replace($searchChar, '', $tag->nodeValue);
         }
+      //  dd($dummy,$data,$tag);
         foreach ($dummy as $key => $value) {
             $finalData[] = array_values(array_filter(explode("\n", $value)));
         }
-        dd($finalData);
+      //  dd($finalData);
 
         return $finalData;
     }

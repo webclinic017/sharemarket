@@ -20,6 +20,7 @@ class CreateOiData extends Migration
             $table->bigInteger('mwpl')->nullable();
             $table->bigInteger('open_interest')->nullable();
             $table->bigInteger('limitNextDay')->nullable();
+            $table->smallInteger('watchlist')->nullable();
             $table->timestamps();
         });
     }

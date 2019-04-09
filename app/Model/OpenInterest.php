@@ -18,22 +18,27 @@ class OpenInterest extends Model
      * @return mixed
      */
 
-     public function avgOIAsPerDayWatchlist()
-     {
-         $day = 19;
-         $latestDate = $this->getLatestDate();
-         $curOi = $this->currentOI($latestDate);
-         $avgOi = $this->avgOIPerDay($day,$latestDate);
-         $finalList = $this->comparisonWithCurrentToAvg($curOi, $avgOi);
-         $watchList = $this->addWatchlist($finalList);
-         return $watchList;
-     }
-
-    public function avgOIPerDay($day,$latestDate)
+    public function avgOIAsPerDayWatchlist()
     {
+        $day = 19;
+        $latestDate = $this->getLatestDate();
+        $curOi = $this->currentOI($latestDate);
+        $avgOi = $this->avgOIPerDay($day, $latestDate);
+        $finalList = $this->comparisonWithCurrentToAvg($curOi, $avgOi);
+        $watchList = $this->addWatchlist($finalList);
+        return $watchList;
+    }
+
+    public function getLatestDate()
+    {
+<<<<<<< HEAD
         $avgOI = \DB::select("select avg(open_interest) open_interest,symbol from (SELECT open_interest,symbol,date FROM
                           share.oi_data where (date > DATE_SUB(curdate(), INTERVAL $day DAY) and date < '".$latestDate."'))  x group by symbol");
         return $avgOI;
+=======
+        $latestDate = $this::latest('date')->first(['date']);
+        return $latestDate->date;
+>>>>>>> dd1e37ef23f1599e959a69f1447075aa4ea9c136
     }
 
     /**
@@ -42,7 +47,7 @@ class OpenInterest extends Model
      */
     public function currentOI($latestDate)
     {
-        $latestData = $this::select('id','date', 'open_interest', 'symbol')
+        $latestData = $this::select('id', 'date', 'open_interest', 'symbol')
             ->where('date', $latestDate)
             ->orderBy('symbol')
             ->get()
@@ -50,10 +55,11 @@ class OpenInterest extends Model
         return $latestData;
     }
 
-    public function getLatestDate()
+    public function avgOIPerDay($day, $latestDate)
     {
-      $latestDate =  $this::latest('date')->first(['date']);
-      return $latestDate->date;
+        $avgOI = \DB::select("select avg(open_interest) open_interest,symbol from (SELECT open_interest,symbol,date FROM
+                          share.oi_data where (date > DATE_SUB(curdate(), INTERVAL $day DAY) and date < '$latestDate'))  x group by symbol");
+        return $avgOI;
     }
 
     public function comparisonWithCurrentToAvg($curOi, $avgOi)
@@ -80,10 +86,10 @@ class OpenInterest extends Model
 
     public function addWatchlist($finalList)
     {
-      $ids = array_column($finalList, 'id');
-      $yn = $this::whereIn('id',$ids)->update(['watchlist' => 1]);
-      $watchlist = $this::where('watchlist',1)->get()->toArray();
-      dd($watchlist);
-      return $watchlist;
+        $ids = array_column($finalList, 'id');
+        $yn = $this::whereIn('id', $ids)->update(['watchlist' => 1]);
+        $watchlist = $this::where('watchlist', 1)->get()->toArray();
+        dd($watchlist);
+        return $watchlist;
     }
 }

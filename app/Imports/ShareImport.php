@@ -157,4 +157,10 @@ class ShareImport
         }
         return $dataArray;
     }
+
+    public function jsonReturnUrl($url)
+    {
+        $json = json_decode(file_get_contents($url, false, $this->contextValue()), true);
+        return $json;
+    }
 }

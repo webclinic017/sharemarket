@@ -13,54 +13,50 @@ class CreateOptionChain extends Migration
      */
     public function up()
     {
-      Schema::table('oi_data', function (Blueprint $table) {
-          $table->smallInteger('watchlist')->nullable();
-      });
-      
-      Schema::create('option_chain_expiry', function (Blueprint $table) {
-          $table->increments('id');
-          $table->date('expirydate');
-          $table->string('expiry_type');
-      });
+        Schema::create('option_chain_expiry', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('symbol');
+            $table->date('expirydate');
+            $table->string('expiry_type');
+        });
 
-      Schema::create('option_chain', function (Blueprint $table) {
+        Schema::create('option_chain', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
             $table->unsignedBigInteger('oce_id');
-            $table->string('symbol');
             $table->bigInteger('calloi')->nullable();
             $table->bigInteger('callchnginoi')->nullable();
             $table->bigInteger('callvolume')->nullable();
             $table->smallInteger('calliv')->nullable();
-            $table->decimal('callltp',20,2)->nullable();
-            $table->decimal('callnetchng',20,2)->nullable();
+            $table->decimal('callltp', 20, 2)->nullable();
+            $table->decimal('callnetchng', 20, 2)->nullable();
             $table->bigInteger('callbidqty')->nullable();
-            $table->decimal('callbidprice',20,2)->nullable();
-            $table->decimal('callaskprice',20,2)->nullable();
+            $table->decimal('callbidprice', 20, 2)->nullable();
+            $table->decimal('callaskprice', 20, 2)->nullable();
             $table->bigInteger('callaskqty')->nullable();
-            $table->decimal('strikeprice',20,2)->nullable();
+            $table->decimal('strikeprice', 20, 2)->nullable();
             $table->bigInteger('putoi')->nullable();
             $table->bigInteger('putchnginoi')->nullable();
             $table->bigInteger('putvolume')->nullable();
             $table->smallInteger('putiv')->nullable();
-            $table->decimal('putltp',20,2)->nullable();
-            $table->decimal('putnetchng',20,2)->nullable();
+            $table->decimal('putltp', 20, 2)->nullable();
+            $table->decimal('putnetchng', 20, 2)->nullable();
             $table->bigInteger('putbidqty')->nullable();
-            $table->decimal('putbidprice',20,2)->nullable();
-            $table->decimal('putaskprice',20,2)->nullable();
+            $table->decimal('putbidprice', 20, 2)->nullable();
+            $table->decimal('putaskprice', 20, 2)->nullable();
             $table->bigInteger('putaskqty')->nullable();
             $table->bigInteger('totalcalloi')->nullable();
             $table->bigInteger('totalcallvolume')->nullable();
             $table->bigInteger('totalputoi')->nullable();
             $table->bigInteger('totalputvolume')->nullable();
-            $table->decimal('pcr',3,2)->nullable();
-            $table->decimal('ivratio',3,2);
+            $table->decimal('pcr', 3, 2)->nullable();
+            $table->decimal('ivratio', 3, 2);
             $table->smallInteger('expiry')->nullable();
             $table->smallInteger('watchlist')->nullable();
         });
 
         Schema::table('option_chain', function (Blueprint $table) {
-          $table->foreign('oce_id')->references('id')->on('option_chain_expiry');
+            $table->foreign('oce_id')->references('id')->on('option_chain_expiry');
         });
     }
 

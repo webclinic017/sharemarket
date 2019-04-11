@@ -66,6 +66,17 @@ class StockDataUploader extends Command
         return true;
     }
 
+    public function openInterest()
+    {
+        $tableName = 'oi_data';
+        $frmToDates = $this->cf->fromDateToDate($tableName);
+        if ($frmToDates === false)
+            return "Open Interest data is already updated";
+        else
+            return $this->si->oiPullDates($frmToDates['fromDate'], $frmToDates['toDate']);
+
+    }
+
     public function participantOI()
     {
         $tableName = 'participant_oi';
@@ -75,7 +86,6 @@ class StockDataUploader extends Command
         else
             return $this->po->participantOIData($frmToDates['fromDate'], $frmToDates['toDate']);
     }
-
 
     /** report 2 = delivery; 3 = Paricipant OI; 4 = OI */
     public function delivery()
@@ -87,16 +97,5 @@ class StockDataUploader extends Command
         } else {
             return $this->sd->delivery($frmToDates['fromDate'], $frmToDates['toDate']);
         }
-    }
-
-    public function openInterest()
-    {
-        $tableName = 'oi_data';
-        $frmToDates = $this->cf->fromDateToDate($tableName);
-        if ($frmToDates === false)
-            return "Open Interest data is already updated";
-        else
-            return $this->si->oiPullDates($frmToDates['fromDate'], $frmToDates['toDate']);
-
     }
 }

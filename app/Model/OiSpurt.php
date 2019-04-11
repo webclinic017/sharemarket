@@ -31,7 +31,7 @@ class OiSpurt extends Model
         $slideInPriceRiseInOI = $this->si->jsonReturnUrl($url);
         $oiSpurtsDataStructure = $this->oiSpurtsDataStructure($slideInPriceRiseInOI, 2);
         $yn = $this->insert($oiSpurtsDataStructure);
-        dd($yn);
+      //  dd($yn);
         return $yn;
     }
 

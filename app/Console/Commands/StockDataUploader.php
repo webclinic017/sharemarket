@@ -9,6 +9,7 @@ use App\Model\ParticipantOI;
 use App\Model\OptionData;
 use App\Model\OpenInterest;
 use App\Imports\CommonFunctionality;
+use App\Model\OiSpurt;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
 class StockDataUploader extends Command
@@ -19,6 +20,8 @@ class StockDataUploader extends Command
     public $od;
     public $sim;
     public $oi;
+    public $os;
+
     /**
      * The name and signature of the console command.
      *
@@ -46,6 +49,7 @@ class StockDataUploader extends Command
         $this->oi = new OpenInterest();
         $this->si = new ShareInfo();
         $this->cf = new CommonFunctionality();
+        $this->os = new OiSpurt();
     }
 
     /**
@@ -55,27 +59,35 @@ class StockDataUploader extends Command
      */
     public function handle()
     {
-        //delivery
-        //OI
-        //Bhavcopy
-        //participant OI
         echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
-        $this->oi->avgOIAsPerDayWatchlist();
+        echo $this->watchListBasedOnOI();
+        echo $this->oiSpurts();
         return true;
+    }
+
+    public function openInterest()
+    {
+        $tableName = 'oi_data';
+        $frmToDates = $this->cf->fromDateToDate($tableName);
+        if ($frmToDates === false) {
+            return "Open Interest data is already updated";
+        } else {
+            return $this->si->oiPullDates($frmToDates['fromDate'], $frmToDates['toDate']);
+        }
     }
 
     public function participantOI()
     {
         $tableName = 'participant_oi';
         $frmToDates = $this->cf->fromDateToDate($tableName);
-        if ($frmToDates === false)
+        if ($frmToDates === false) {
             return "Participant OI data is already updated";
-        else
+        } else {
             return $this->po->participantOIData($frmToDates['fromDate'], $frmToDates['toDate']);
+        }
     }
-
 
     /** report 2 = delivery; 3 = Paricipant OI; 4 = OI */
     public function delivery()
@@ -89,14 +101,23 @@ class StockDataUploader extends Command
         }
     }
 
-    public function openInterest()
+    public function watchListBasedOnOI()
     {
-        $tableName = 'oi_data';
-        $frmToDates = $this->cf->fromDateToDate($tableName);
-        if ($frmToDates === false)
-            return "Open Interest data is already updated";
-        else
-            return $this->si->oiPullDates($frmToDates['fromDate'], $frmToDates['toDate']);
+        $watchlist = $this->oi->avgOIAsPerDayWatchlist();
+        $count = count($watchlist);
+        return "$count no of stocks added in watchlist";
+    }
 
+    public function oiSpurts()
+    {
+        $tableName = 'oi_spurt';
+        $frmToDates = $this->cf->fromDateToDate($tableName);
+        if ($frmToDates === false) {
+            return "OI Spurts is already updated";
+        } else {
+            $this->os->riseInPriceRiseInOI();
+            $this->os->slideInPriceRiseInOI();
+            return "OI spurts data added";
+        }
     }
 }

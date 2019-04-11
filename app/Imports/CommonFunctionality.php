@@ -29,7 +29,7 @@ class CommonFunctionality
             $fromDate = new \DateTime($fdResult->date);
             $fromDate = $fromDate->modify('+1 day');
         } else {
-            $fromDate = new \DateTime('2015-09-31');
+            $fromDate = new \DateTime('2019-04-11');
         }
 
         $toDate = new \DateTime();

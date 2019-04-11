@@ -83,7 +83,7 @@ class OpenInterest extends Model
         $ids = array_column($finalList, 'id');
         $yn = $this::whereIn('id', $ids)->update(['watchlist' => 1]);
         $watchlist = $this::where('watchlist', 1)->get()->toArray();
-        dd($watchlist);
+        //dd($watchlist);
         return $watchlist;
     }
 }

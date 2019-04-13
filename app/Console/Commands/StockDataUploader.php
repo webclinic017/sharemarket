@@ -105,7 +105,7 @@ class StockDataUploader extends Command
     {
         $watchlist = $this->oi->avgOIAsPerDayWatchlist();
         $count = count($watchlist);
-        return "$count no of stocks added in watchlist";
+        return "$count no of stocks added in watchlist\n";
     }
 
     public function oiSpurts()
@@ -117,7 +117,7 @@ class StockDataUploader extends Command
         } else {
             $this->os->riseInPriceRiseInOI();
             $this->os->slideInPriceRiseInOI();
-            return "OI spurts data added";
+            return "OI spurts data added\n";
         }
     }
 }

@@ -30,7 +30,10 @@ class OptionController extends Controller
     public function stockOptionChain()
     {
         $underlyingExpiries = $this->od->stockOptionData();
+    }
 
-        //$this->od->optionChainExpiry($underlyingExpiries);
+    public function indexOptionChain()
+    {
+        $underlyingExpiries = $this->od->indexOptionData();
     }
 }

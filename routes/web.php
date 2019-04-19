@@ -27,6 +27,7 @@ Route::get('/delivery', 'StockDataController@delivery')->name('delivery');
 Route::get('/participantOIData', 'ParticipantController@participantOIData')->name('participantOIData');
 Route::get('/bhavcopy', 'StockDataController@bhavCopyDataPull')->name('bhavcopy');
 Route::get('/option', 'OptionController@stockOptionChain')->name('option');
+Route::get('/indexoption', 'OptionController@indexOptionChain')->name('indexoption');
 Route::get('/openinterest', 'OptionController@openInterestBrkOut')->name('optionBrkOut');
 Route::get('/stockopeninterest', 'OptionController@stockOptionChain')->name('stockopeninterest');
 Route::get('/avgoi', 'OpenInterestController@avgOIPerDay')->name('avgoi');

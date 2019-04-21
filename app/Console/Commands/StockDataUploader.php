@@ -64,6 +64,7 @@ class StockDataUploader extends Command
         echo $this->delivery();
         echo $this->watchListBasedOnOI();
         echo $this->oiSpurts();
+        echo $this->optionChainData();
         return true;
     }
 
@@ -110,14 +111,18 @@ class StockDataUploader extends Command
 
     public function oiSpurts()
     {
-        $tableName = 'oi_spurt';
-        $frmToDates = $this->cf->fromDateToDate($tableName);
-        if ($frmToDates === false) {
-            return "OI Spurts is already updated";
-        } else {
-            $this->os->riseInPriceRiseInOI();
-            $this->os->slideInPriceRiseInOI();
+        $yn = $this->os->riseInPriceRiseInOI();
+        $yn = $this->os->slideInPriceRiseInOI();
+        if ($yn) {
             return "OI spurts data added\n";
+        } else {
+            return "OI spurts data already added\n";
         }
+    }
+
+    public function optionChainData()
+    {
+        $this->od->stockOptionData();
+        $this->od->indexOptionData();
     }
 }

@@ -35,12 +35,15 @@ class OiSpurt extends Model
         foreach ($oiData['data'] as $columnName => $columnValue) {
             $oiSpurtData['data'][$columnName]['date'] = $fetchDate;
             $oiSpurtData['data'][$columnName]['type'] = $type;
+            $oiSpurtData['data'][$columnName]['symbol'] = str_replace(",", "", $columnValue['symbol']);
+            $oiSpurtData['data'][$columnName]['instrument'] = str_replace(",", "", $columnValue['instrument']);
             $oiSpurtData['data'][$columnName]['expiry'] = date('Y-m-d', strtotime($columnValue['expiry']));
+            $oiSpurtData['data'][$columnName]['optionType'] = str_replace(",", "", $columnValue['optionType']);
             $oiSpurtData['data'][$columnName]['strike'] = str_replace(",", "", $columnValue['strike']);
+            $oiSpurtData['data'][$columnName]['ltp'] = str_replace(",", "", $columnValue['ltp']);
             $oiSpurtData['data'][$columnName]['latestOI'] = str_replace(",", "", $columnValue['latestOI']);
             $oiSpurtData['data'][$columnName]['previousOI'] = str_replace(",", "", $columnValue['previousOI']);
             $oiSpurtData['data'][$columnName]['prevClose'] = str_replace(",", "", $columnValue['prevClose']);
-            $oiSpurtData['data'][$columnName]['ltp'] = str_replace(",", "", $columnValue['ltp']);
             $oiSpurtData['data'][$columnName]['previousOI'] = str_replace(",", "", $columnValue['previousOI']);
             $oiSpurtData['data'][$columnName]['oiChange'] = str_replace(",", "", $columnValue['oiChange']);
             $oiSpurtData['data'][$columnName]['volume'] = str_replace(",", "", $columnValue['volume']);

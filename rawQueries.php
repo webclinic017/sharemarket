@@ -6,4 +6,5 @@ DELETE FROM `dateinsert_report` WHERE report = 3;
 SELECT avg(`open_interest`) FROM (SELECT * FROM oi_data WHERE symbol = 'infy' ORDER BY date desc LIMIT 0,15 ) s
 
 Q: to take option watchList
-SELECT oc.expirydate,strikeprice, callchnginoi,putchnginoi,ivratio, oc.symbol FROM `option_chain` join option_chain_expiry oc on oce_id = oc.id where watchlist = 1
+SELECT date, oc.expirydate,strikeprice, callchnginoi,putchnginoi,calliv, putiv, ivratio, oc.symbol FROM `option_chain` join option_chain_expiry oc on oce_id = oc.id where watchlist = 1
+ORDER BY `date`  DESC

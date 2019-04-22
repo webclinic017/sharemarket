@@ -45,11 +45,6 @@ class CreateOptionChain extends Migration
             $table->decimal('putbidprice', 20, 2)->nullable();
             $table->decimal('putaskprice', 20, 2)->nullable();
             $table->bigInteger('putaskqty')->nullable();
-            $table->bigInteger('totalcalloi')->nullable();
-            $table->bigInteger('totalcallvolume')->nullable();
-            $table->bigInteger('totalputoi')->nullable();
-            $table->bigInteger('totalputvolume')->nullable();
-            $table->decimal('pcr', 3, 2)->nullable();
             $table->decimal('ivratio', 3, 2);
             $table->smallInteger('expiry')->nullable();
             $table->smallInteger('watchlist')->nullable();

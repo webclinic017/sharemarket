@@ -39,6 +39,7 @@ class OiSpurt extends Model
             $oiSpurtData['data'][$columnName]['instrument'] = str_replace(",", "", $columnValue['instrument']);
             $oiSpurtData['data'][$columnName]['expiry'] = date('Y-m-d', strtotime($columnValue['expiry']));
             $oiSpurtData['data'][$columnName]['optionType'] = str_replace(",", "", $columnValue['optionType']);
+            $oiSpurtData['data'][$columnName]['percLtpChange'] = str_replace(",", "", $columnValue['percLtpChange']);
             $oiSpurtData['data'][$columnName]['strike'] = str_replace(",", "", $columnValue['strike']);
             $oiSpurtData['data'][$columnName]['ltp'] = str_replace(",", "", $columnValue['ltp']);
             $oiSpurtData['data'][$columnName]['latestOI'] = str_replace(",", "", $columnValue['latestOI']);

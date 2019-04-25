@@ -122,7 +122,8 @@ class StockDataUploader extends Command
 
     public function optionChainData()
     {
-        $this->od->stockOptionData();
         $this->od->indexOptionData();
+        $this->od->stockOptionData();
+
     }
 }

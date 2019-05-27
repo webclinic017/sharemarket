@@ -20,13 +20,29 @@ class OiSpurt extends Model
         $yn = false;
         $url = 'https://www.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/riseInPriceRiseInOI.json';
         $riseInPriceRiseInOI = $this->si->jsonReturnUrl($url);
-        $fetchDate =  $this->lastDateData($riseInPriceRiseInOI['time'],1);
+        $fetchDate = $this->lastDateData($riseInPriceRiseInOI['time'], 1);
         if ($fetchDate) {
             $oiSpurtsDataStructure = $this->oiSpurtsDataStructure($riseInPriceRiseInOI, 1, $fetchDate);
             $yn = $this->insert($oiSpurtsDataStructure);
         }
         //dd($yn);
         return $yn;
+    }
+
+    /**
+     * This function checks if last record date same as fetch record date or not
+     * @param $oiDate
+     * @return bool|false|string
+     */
+    public function lastDateData($oiDate, $type)
+    {
+        $fetchDate = date('Y-m-d', strtotime($oiDate));
+        $fdResult = $this->where('type', $type)->latest('date')->first();
+        if (isset($fdResult->date) && $fdResult->date === $fetchDate) {
+            return false;
+        } else {
+            return $fetchDate;
+        }
     }
 
     public function oiSpurtsDataStructure($oiData, $type, $fetchDate)
@@ -60,28 +76,12 @@ class OiSpurt extends Model
         $yn = false;
         $url = 'https://www.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/slideInPriceRiseInOI.json';
         $slideInPriceRiseInOI = $this->si->jsonReturnUrl($url);
-        $fetchDate =  $this->lastDateData($slideInPriceRiseInOI['time'],2);
+        $fetchDate = $this->lastDateData($slideInPriceRiseInOI['time'], 2);
         if ($fetchDate) {
             $oiSpurtsDataStructure = $this->oiSpurtsDataStructure($slideInPriceRiseInOI, 2, $fetchDate);
             $yn = $this->insert($oiSpurtsDataStructure);
         }
         //  dd($yn);
         return $yn;
-    }
-
-    /**
-     * This function checks if last record date same as fetch record date or not
-     * @param $oiDate
-     * @return bool|false|string
-     */
-    public function lastDateData($oiDate,$type)
-    {
-        $fetchDate = date('Y-m-d', strtotime($oiDate));
-        $fdResult = $this->where('type',$type)->latest('date')->first();
-        if (isset($fdResult->date) && $fdResult->date === $fetchDate) {
-            return false;
-        } else {
-            return $fetchDate;
-        }
     }
 }

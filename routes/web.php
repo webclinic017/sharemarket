@@ -32,3 +32,4 @@ Route::get('/openinterest', 'OptionController@openInterestBrkOut')->name('option
 Route::get('/stockopeninterest', 'OptionController@stockOptionChain')->name('stockopeninterest');
 Route::get('/avgoi', 'OpenInterestController@avgOIPerDay')->name('avgoi');
 Route::get('/oispurts', 'OpenInterestController@oiSpurts')->name('oispurts');
+Route::get('/probability', 'ProbabilityController@viewProb')->name('viewProb');

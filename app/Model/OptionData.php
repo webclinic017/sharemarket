@@ -111,8 +111,9 @@ class OptionData extends Model
                 ->where('oce_id', $underlying->id)
                 ->where('date', $fetchdate)
                 ->first();
+
             //checks record already present or not if yes then return 0 otherwise return option_chain_expiry id
-            if (isset($underlyingData->id)) {
+            if (isset($underlyingData->id) && $underlyingData->id) {
                 return 0;
             } else {
                 return $underlying->id;

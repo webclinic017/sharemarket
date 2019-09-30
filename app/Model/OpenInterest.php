@@ -25,7 +25,7 @@ class OpenInterest extends Model
         $curOi = $this->currentOI($latestDate);
         $avgOi = $this->avgOIPerDay($day, $latestDate);
         $finalList = $this->comparisonWithCurrentToAvg($curOi, $avgOi);
-        $watchList = $this->addWatchlist($finalList);
+        $watchList = $this->addWatchlist($finalList, $latestDate);
         return $watchList;
     }
 
@@ -62,7 +62,7 @@ class OpenInterest extends Model
         $finalList = [];
 
         foreach ($curOi as $keyCurOi => $valCurOi) {
-          //  dd($keyCurOi, $valCurOi, $avgOi[$keyCurOi]);
+            //  dd($keyCurOi, $valCurOi, $avgOi[$keyCurOi]);
             if (isset($valCurOi['symbol'], $avgOi[$keyCurOi]->symbol) && $valCurOi['symbol'] === $avgOi[$keyCurOi]->symbol) {
                 if ($valCurOi['open_interest'] > $avgOi[$keyCurOi]->open_interest) {
                     $finalList[$j]['id'] = $valCurOi['id'];
@@ -74,16 +74,20 @@ class OpenInterest extends Model
                 }
             }
         }
-      //  dd($finalList);
         return $finalList;
     }
 
-    public function addWatchlist($finalList)
+    public function addWatchlist($finalList, $latestDate)
     {
         $ids = array_column($finalList, 'id');
         $yn = $this::whereIn('id', $ids)->update(['watchlist' => 1]);
-        $watchlist = $this::where('watchlist', 1)->get()->toArray();
-        //dd($watchlist);
+        $watchlist = $this::where('watchlist', 1)->where('date', $latestDate)->get()->toArray();
+        return $watchlist;
+    }
+
+    public function watchlistStocks($limit)
+    {
+        $watchlist = $this::where('watchlist', 1)->orderBy('date', 'desc')->limit($limit)->get()->toArray();
         return $watchlist;
     }
 }

@@ -114,4 +114,24 @@ class ParticipantOI extends Model
     {
         return ParticipantOI::insert($dataPOI);
     }
+
+    public function participantOIMood()
+    {
+        $participantOIData = [];
+        $client_type = ['Client','FII', 'PRO', 'DII'];
+        foreach ($client_type as $type) {
+            $lastRow = $this->where('client_type', $type)->latest('date')->first();
+            $participantOIData[$type]['indexFuture'] = $lastRow->future_index_long - $lastRow->future_index_short;
+            $participantOIData[$type]['indexOptionCall'] = $lastRow->option_index_call_long - $lastRow->option_index_call_short;
+            $participantOIData[$type]['indexOptionPut'] = $lastRow->option_index_put_long - $lastRow->option_index_put_short;
+            $participantOIData[$type]['stockFuture'] = $lastRow->future_stock_long - $lastRow->future_stock_short;
+            $participantOIData[$type]['index_long_per'] = $lastRow->index_long_per;
+            $participantOIData[$type]['index_short_per'] = $lastRow->index_short_per;
+            $participantOIData[$type]['index_short_per'] = $lastRow->index_short_per;
+            $participantOIData[$type]['stock_long_per'] = $lastRow->stock_long_per;
+            $participantOIData[$type]['stock_short_per'] = $lastRow->stock_short_per;
+        }
+
+        return $participantOIData;
+    }
 }

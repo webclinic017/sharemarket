@@ -36,4 +36,19 @@ class OptionController extends Controller
     {
         $underlyingExpiries = $this->od->indexOptionData();
     }
+    public function jabraAction()
+    {
+      $action = $this->od->jabardastAction();
+      return view ('jabraaction',compact('action'));
+    }
+    public function jabraIV()
+    {
+      $action = $this->od->jabardastIV();
+      return view ('jabraIV',compact('action'));
+    }
+    public function niftyExpiryWise($expiry)
+    {
+      $action = $this->od->niftyExpiryWise($expiry);
+      return view ('jabraIV',compact('action'));
+    }
 }

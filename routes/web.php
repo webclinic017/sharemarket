@@ -38,3 +38,5 @@ Route::get('/participant', 'ParticipantController@perSegment')->name('perSegment
 Route::get('/jabraaction', 'OptionController@jabraAction')->name('jabraAction');
 Route::get('/jabraiv', 'OptionController@jabraIV')->name('jabraIV');
 Route::get('/niftyexpirywise/{expiry}', 'OptionController@niftyExpiryWise')->name('jabraIV');
+Route::get('/jabraopeninterest', 'DashboardController@strongOI')->name('strongOI');
+Route::get('/fiboo', 'FibonacciController@fibonacciCalculator')->name('fibb');

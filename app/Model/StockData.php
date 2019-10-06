@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Imports\ShareImport;
+use App\Imports\CommonFunctionality;
 
 class StockData extends Model
 {
@@ -37,11 +38,17 @@ class StockData extends Model
 
     public function shareOHLC()
     {
-        $from = new DateTime('2018-01-01 00:00:00');
-        $to = new DateTime('2019-03-01 00:00:00');
-        $url = "https://www.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
-        $html = $this->shareImp->downloadZip($url);
-        $html = $this->shareImp->get($url);
+        $from = new DateTime('2018-10-04');
+        $to = new DateTime('2019-10-04');
+        if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+            $from = $from->modify('+1 day');
+        } else {
+            $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
+            $url = "https://www.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
+            $html = $this->shareImp->downloadZip($url);
+
+            $html = $this->shareImp->get($url);
+        }
     }
 
     public function delivery($from, $to)
@@ -53,6 +60,7 @@ class StockData extends Model
             } else {
                 $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
                 $dataDelivery = $this->deliveryPull($dateOfDelivery);
+
                 if ($dataDelivery) {
                     $yn = false;
                     $yn = $this->insertData($dataDelivery);
@@ -104,28 +112,48 @@ class StockData extends Model
     {
         $url = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
         return $this->shareImp->pullDataFromRemote($url);
-
     }
 
-    public function stockDvaataStructure($shareArray)
+    public function stockDataStructure($shareArray)
     {
         $j = 0;
-        for ($i = 4; $i < count($shareArray) - 1; $i++) {
-            if (count($shareArray) > 0 && isset($shareArray[$i][0]) && 'eq' === strtolower($shareArray[$i][1])) {
-                $dataDelivery[$j]['symbol'] = $shareArray[$i][0] ?? null;
+        $dataDelivery = [];
+        for ($i = 1; $i < count($shareArray) - 1; $i++) {
+            if (count($shareArray) > 0 && isset($shareArray[$i][0]) && 'eq' === strtolower(trim($shareArray[$i][1]))) {
+                $cm = new CommonFunctionality();
+                $bhavDaate = $cm->convertExpiryToDateFormat(trim($shareArray[$i][2]));
+                $dataDelivery[$j]['symbol'] = trim($shareArray[$i][0]) ?? null;
                 $dataDelivery[$j]['series'] = $shareArray[$i][1] ?? null;
-                $dataDelivery[$j]['prev_close'] = $shareArray[$i][4] ?? null;
-                $dataDelivery[$j]['open'] = $shareArray[$i][5] ?? null;
-                $dataDelivery[$j]['high'] = $shareArray[$i][6] ?? null;
-                $dataDelivery[$j]['low'] = $shareArray[$i][6] ?? null;
-                $dataDelivery[$j]['close'] = $shareArray[$i][6] ?? null;
-                $dataDelivery[$j]['last_price'] = $shareArray[$i][6] ?? null;
-                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
-                $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][6] ?? null;
-
-                $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
+                $dataDelivery[$j]['prev_close'] = trim($shareArray[$i][3]) ?? null;
+                $dataDelivery[$j]['open'] = trim($shareArray[$i][4]) ?? null;
+                $dataDelivery[$j]['high'] = trim($shareArray[$i][5]) ?? null;
+                $dataDelivery[$j]['low'] = trim($shareArray[$i][6]) ?? null;
+                $dataDelivery[$j]['last_price'] = trim($shareArray[$i][7]) ?? null;
+                $dataDelivery[$j]['close'] = trim($shareArray[$i][8]) ?? null;
+                $dataDelivery[$j]['vwap'] = trim($shareArray[$i][9]) ?? null;
+                $dataDelivery[$j]['total_traded_qty'] = trim($shareArray[$i][10]) ?? null;
+                $dataDelivery[$j]['turnover'] = trim($shareArray[$i][11]) ?? null;
+                $dataDelivery[$j]['no_of_trades'] = trim($shareArray[$i][12]) ?? null;
+                $dataDelivery[$j]['deliverable_qty'] = trim($shareArray[$i][13]) ?? null;
+                $dataDelivery[$j]['per_delqty_to_trdqty'] = trim($shareArray[$i][14]) ?? null;
+                $dataDelivery[$j]['date'] = $bhavDaate;
                 $j++;
             }
+        }
+        return $dataDelivery;
+    }
+
+    public function stockDataInsert(array $dataDelivery)
+    {
+        if (isset($dataDelivery[0]['date'])) {
+            $fdResult = \DB::table('stock_price')->latest('date')->first();
+            if (isset($fdResult->date) && $fdResult->date == $dataDelivery[0]['date']) {
+                return false;
+            } else {
+                return \DB::table('stock_price')->insert($dataDelivery);
+            }
+        } else {
+            return 2;
         }
     }
 }

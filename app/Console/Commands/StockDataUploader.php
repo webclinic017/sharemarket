@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Imports\ShareImport;
 use Illuminate\Console\Command;
 use App\Model\StockData;
 use App\Model\ShareInfo;
@@ -21,6 +22,7 @@ class StockDataUploader extends Command
     public $sim;
     public $oi;
     public $os;
+    public $shareImp;
 
     /**
      * The name and signature of the console command.
@@ -50,6 +52,7 @@ class StockDataUploader extends Command
         $this->si = new ShareInfo();
         $this->cf = new CommonFunctionality();
         $this->os = new OiSpurt();
+        $this->shareImp = new ShareImport();
     }
 
     /**
@@ -59,12 +62,13 @@ class StockDataUploader extends Command
      */
     public function handle()
     {
-        echo $this->openInterest();
+        echo $this->bhavCopyDataPull();
+        /*echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
         echo $this->watchListBasedOnOI();
         echo $this->oiSpurts();
-        echo $this->optionChainData();
+        echo $this->optionChainData();*/
         return true;
     }
 
@@ -125,5 +129,29 @@ class StockDataUploader extends Command
         $insertYN = true;
         $this->od->indexOptionData($insertYN);
         $this->od->stockOptionData($insertYN);
+    }
+
+    public function bhavCopyDataPull()
+    {
+        $data = $this->sd->bhavCopyDataPull();
+        $bhavcopy = $this->shareImp->convertPlainTextLineByLineToArray($data);
+        $bhavcopyData = $this->sd->stockDataStructure($bhavcopy);
+        $yn = $this->sd->stockDataInsert($bhavcopyData);
+        if ($yn) {
+            return "Bhav copy data added\n";
+        }
+        switch ($yn) {
+            case 0:
+                echo "Bhav copy record already added\n";
+                break;
+            case 1:
+                echo "Bhav copy data added successfully\n";
+                break;
+            case 2:
+                echo "No data in Bhav copy\n";
+                break;
+            default:
+                echo "Kuch to Gadbad he\n";
+        }
     }
 }

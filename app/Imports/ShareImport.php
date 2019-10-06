@@ -142,7 +142,6 @@ class ShareImport
         if ($res === true) {
             $zip->extractTo($path);
             $zip->close();
-            dd($zip);
             return true;
         } else {
             return false;

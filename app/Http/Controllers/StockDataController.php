@@ -26,9 +26,8 @@ class StockDataController extends Controller
     {
         $data = $this->sD->bhavCopyDataPull();
         $bhavcopy = $this->shareImp->convertPlainTextLineByLineToArray($data);
-        dd($bhavcopy);
+        $bhavcopyData = $this->sD->stockDataStructure($bhavcopy);
+        $stockData = $this->sD->stockDataInsert($bhavcopyData);
+        return $stockData;
     }
-
-
-
 }

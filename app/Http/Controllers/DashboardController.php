@@ -30,4 +30,11 @@ class DashboardController extends Controller
         $mood = $po->participantOIMood();
         return $mood;
     }
+
+    public function strongOI()
+    {
+        $oi = new OpenInterest();
+        $avgOi = $oi->watchlistStocks(20);
+        return view('averageOI', compact('avgOi'));
+    }
 }

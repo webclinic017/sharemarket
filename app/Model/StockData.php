@@ -107,7 +107,7 @@ class StockData extends Model
 
     }
 
-    public function stockDataStructure($shareArray)
+    public function stockDvaataStructure($shareArray)
     {
         $j = 0;
         for ($i = 4; $i < count($shareArray) - 1; $i++) {

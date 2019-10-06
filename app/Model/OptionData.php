@@ -233,4 +233,33 @@ class OptionData extends Model
             $this->optionChainExpiry($expiriesAndUnderlying, $this->optionType['index']);
         }
     }
+
+    public function jabardastAction()
+    {
+      $action = \DB::select("SELECT DATE,oc.expirydate,strikeprice,callchnginoi,putchnginoi,calliv,
+                putiv,ivratio,oc.symbol,callltp, putltp, oce_id FROM option_chain JOIN option_chain_expiry oc ON
+                oce_id = oc.id WHERE (callchnginoi > 1000000 OR putchnginoi > 1000000)
+                ORDER BY `date` DESC");
+
+      return $action;
+    }
+
+    public function jabardastIV()
+    {
+      $action = \DB::select("SELECT DATE,oc.expirydate,strikeprice,callchnginoi,putchnginoi,calliv,
+                putiv,ivratio,oc.symbol,callltp, putltp, oce_id FROM option_chain JOIN option_chain_expiry oc ON
+                oce_id = oc.id WHERE ivratio > 3
+                ORDER BY `date` DESC");
+      return $action;
+    }
+
+    public function niftyExpiryWise($expiryNumber)
+    {
+      $action = \DB::select("SELECT DATE,oc.expirydate,strikeprice,callchnginoi,putchnginoi,calliv,
+                putiv,ivratio,oc.symbol,callltp, putltp, oce_id FROM option_chain JOIN option_chain_expiry oc ON
+                oce_id = oc.id WHERE expiry = ? AND oc.symbol = 'NIFTY' AND watchlist = 1
+                ORDER BY `date` DESC",[$expiryNumber]);
+      return $action;
+    }
+
 }

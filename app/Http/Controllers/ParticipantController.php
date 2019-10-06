@@ -42,6 +42,17 @@ class ParticipantController extends Controller
         $fm = $from->format('Y-m-d');
         $td = $to->format('Y-m-d');
         return "All Participant Open Interest done from $fm to $td";
-
     }
+
+    public function perSegment()
+    {
+      $segment = ['CLIENT', 'PRO', 'FII', 'DII'];
+      $segmentWiseData = [];
+      $limit = 10;
+      foreach ($segment as $segName) {
+        $segmentWiseData[$segName] = $this->pOi->perSegParticipantOI($segName, $limit);
+      }
+      return view ('participant',compact('segmentWiseData','limit'));
+    }
+
 }

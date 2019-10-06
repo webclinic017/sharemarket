@@ -114,4 +114,11 @@ class ParticipantOI extends Model
     {
         return ParticipantOI::insert($dataPOI);
     }
+
+    public function perSegParticipantOI($segment, $limit)
+    {
+    //  SELECT date, (`future_index_long`- `future_index_short`)INDEX_futm, (`option_index_call_long`-`option_index_call_short`) option_call, (`option_index_put_long`-`option_index_put_short`) option_put FROM `participant_oi` WHERE `client_type` = 'pro' ORDER by date DESC
+      $result = \DB::select("SELECT date, (`future_index_long`- `future_index_short`)index_fut, (`option_index_call_long`-`option_index_call_short`) option_call, (`option_index_put_long`-`option_index_put_short`) option_put FROM `participant_oi` WHERE `client_type` = ? ORDER by date DESC LIMIT ?",[$segment, $limit]);
+      return $result;
+    }
 }

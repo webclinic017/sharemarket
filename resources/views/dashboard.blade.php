@@ -53,6 +53,27 @@
                     @endforeach
                 </table>
             </div>
+            <div class="col-md-4">
+                <table class="table" style="font-size: .7rem;">
+                    <tr>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Buy Value</th>
+                        <th>Sell Value</th>
+                        <th>Net Value</th>
+                    </tr>
+
+                    @foreach($partipantData as $type => $md)
+                        <tr>
+                            <td>{{$md[0]}}</td>
+                            <td>{{$md[1]}}</td>
+                            <td>{{$md[2]}}</td>
+                            <td>{{$md[3]}}</td>
+                            <td>{{$md[4]}}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">

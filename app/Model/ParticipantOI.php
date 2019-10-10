@@ -142,4 +142,18 @@ class ParticipantOI extends Model
         $result = \DB::select("SELECT date, (`future_index_long`- `future_index_short`)index_fut, (`option_index_call_long`-`option_index_call_short`) option_call, (`option_index_put_long`-`option_index_put_short`) option_put FROM `participant_oi` WHERE `client_type` = ? ORDER by date DESC LIMIT ?", [$segment, $limit]);
         return $result;
     }
+
+    public function participantWiseEquityData()
+    {
+      $partipants = ['fii','Dii']; $partipantsData = [];
+      foreach ($partipants as $partipant) {
+        $url = 'https://www.nseindia.com/products/dynaContent/equities/equities/htms/'.$partipant.'EQ.htm';
+        $rawHtmlDataPart = $this->shareImp->get($url);
+        $exptractedDataPart = $this->shareImp->findClass('alt');
+        $dataPart = $this->shareImp->getNodeValue($exptractedDataPart);
+        $dataPart = $this->shareImp->convertWholeLineToArray($dataPart);
+        $partipantsData[$partipant] = $dataPart[0];
+      }
+      return $partipantsData;
+    }
 }

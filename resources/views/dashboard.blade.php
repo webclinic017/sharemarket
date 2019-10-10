@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <table class="table">
                     <tr>
                         <th>Client Type</th>
@@ -53,8 +53,11 @@
                     @endforeach
                 </table>
             </div>
-            <div class="col-md-4">
-                <table class="table" style="font-size: .7rem;">
+            <div class="col-md-5">
+                <table class="table" style="font-size: .8rem;">
+                  <tr>
+                    <th colspan="5">Trading activity on NSE,BSE and MSEI in Capital Market Segment<br/>(In Rs. Crores)</th>
+                  </tr>
                     <tr>
                         <th>Category</th>
                         <th>Date</th>

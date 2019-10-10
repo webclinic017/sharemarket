@@ -20,7 +20,7 @@ class OpenInterest extends Model
 
     public function avgOIAsPerDayWatchlist()
     {
-        $day = 19;
+        $day = 14;
         $latestDate = $this->getLatestDate();
         $curOi = $this->currentOI($latestDate);
         $avgOi = $this->avgOIPerDay($day, $latestDate);

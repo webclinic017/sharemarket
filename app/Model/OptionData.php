@@ -25,9 +25,11 @@ class OptionData extends Model
 
     public function stockOptionData($insertYN)
     {
+        $expiries = $this->fnoStocksExpiry('FUTIDX');
         $expiriesAndUnderlying = $this->fnoStocksExpiry('FUTSTK');
-        if (isset($expiriesAndUnderlying['expiries'], $expiriesAndUnderlying['underlyings'])) {
-            $this->optionChainExpiry($expiriesAndUnderlying, $this->optionType['stock'], $insertYN);
+
+        if (isset($expiries['expiries'], $expiriesAndUnderlying['underlyings'])) {
+            $this->optionChainExpiry($expiries['expiries'], $expiriesAndUnderlying, $this->optionType['stock'], $insertYN);
         }
     }
 
@@ -37,32 +39,32 @@ class OptionData extends Model
         return $fnoData;
     }
 
-    public function optionChainExpiry(array $expiries, $optionType, $insertYN)
+    public function optionChainExpiry(array $expiryDate, array $expiries, $optionType, $insertYN)
     {
         $pcrData = array();
 
-        for ($i = 0; $i < count($expiries['expiries']); $i++) {
+        for ($i = 0; $i < count($expiryDate); $i++) {
             if (!$insertYN && $i > 1 && $optionType === 'OPTSTK') {
                 dd($insertYN, $optionType, $i);
                 break;
             }
             for ($j = 0; $j < count($expiries['underlyings']); $j++) {
-                DB::transaction(function () use ($expiries, $optionType, $i, $j, $insertYN) {
+                DB::transaction(function () use ($expiryDate, $expiries, $optionType, $i, $j, $insertYN) {
                     $optionRawData = array();
-                    $optionRawData = $this->getOptionData($expiries['underlyings'][$j], $expiries['expiries'][$i], $optionType);
+                    $optionRawData = $this->getOptionData($expiries['underlyings'][$j], $expiryDate[$i], $optionType);
                     if (isset($optionRawData[0][2])) {
                         $fetchDate = $this->optionPullDataDate($optionRawData[0][2]);
-                        $optionChainExpiryId = $this->getOptionChainExpiryId($expiries['underlyings'][$j], $expiries['expiries'][$i], 'm', $fetchDate, $insertYN);
+                        $optionChainExpiryId = $this->getOptionChainExpiryId($expiries['underlyings'][$j], $expiryDate[$i], 'm', $fetchDate, $insertYN);
                         if (isset($fetchDate) && $optionChainExpiryId) {
                             $yn = $this->getOptionChainDataStructure($fetchDate, $expiries['underlyings'][$j], $optionRawData, $optionChainExpiryId, $i, $insertYN);
                             $pcrData[] = $this->pcrData($fetchDate, $optionRawData[count($optionRawData) - 2], $optionChainExpiryId);
                             if ($insertYN) {
                                 $this->dataInsert('pcr', $pcrData);
-                                echo $expiries['underlyings'][$j] . " of " . $expiries['expiries'][$i] . " option chain and PCR inserted\n";
+                                echo $expiries['underlyings'][$j] . " of " . $expiryDate[$i] . " option chain and PCR inserted\n";
                             }
                         } else {
                             if ($insertYN)
-                                echo $expiries['underlyings'][$j] . " of " . $expiries['expiries'][$i] . " option chain and PCR already present\n";
+                                echo $expiries['underlyings'][$j] . " of " . $expiryDate[$i] . " option chain and PCR already present\n";
                         }
                     }
                     //dd($optionRawData);
@@ -247,7 +249,7 @@ class OptionData extends Model
     {
         $expiriesAndUnderlying = $this->fnoStocksExpiry('FUTIDX');
         if (isset($expiriesAndUnderlying['expiries'], $expiriesAndUnderlying['underlyings'])) {
-            $this->optionChainExpiry($expiriesAndUnderlying, $this->optionType['index'], $insertYN);
+            $this->optionChainExpiry($expiriesAndUnderlying['expiries'], $expiriesAndUnderlying, $this->optionType['index'], $insertYN);
         }
     }
 

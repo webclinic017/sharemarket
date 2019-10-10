@@ -63,12 +63,12 @@ class StockDataUploader extends Command
     public function handle()
     {
         echo $this->bhavCopyDataPull();
-        /*echo $this->openInterest();
+        echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
         echo $this->watchListBasedOnOI();
         echo $this->oiSpurts();
-        echo $this->optionChainData();*/
+        echo $this->optionChainData();
         return true;
     }
 

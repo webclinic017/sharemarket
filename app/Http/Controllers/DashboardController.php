@@ -7,6 +7,7 @@ use App\Model\Pcr;
 use App\Imports\CommonFunctionality;
 use App\Model\ParticipantOI;
 use App\Model\OpenInterest;
+use App\Imports\ShareImport;
 
 class DashboardController extends Controller
 {
@@ -21,7 +22,8 @@ class DashboardController extends Controller
         $mood = $this->participantOI();
         $oi = new OpenInterest();
         $avgOi = $oi->watchlistStocks(20);
-        return view('dashboard', compact('pcr', 'mood', 'avgOi'));
+        $partipantData = $this->tradingActivity();
+        return view('dashboard', compact('pcr', 'mood', 'avgOi','partipantData'));
     }
 
     public function participantOI()
@@ -36,5 +38,12 @@ class DashboardController extends Controller
         $oi = new OpenInterest();
         $avgOi = $oi->watchlistStocks(20);
         return view('averageOI', compact('avgOi'));
+    }
+
+    public function tradingActivity()
+    {
+      $po = new ParticipantOI();
+      $partipantData = $po->participantWiseEquityData();
+      return $partipantData;
     }
 }

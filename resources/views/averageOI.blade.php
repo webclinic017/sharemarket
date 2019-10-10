@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><h4>Participant Wise Open Interest</h4>  </div>
+                <div class="card-header"><h4>Open Interest > 14 days average </h4></div>
 
                 <div class="card-body">
                     @if (session('status'))

@@ -43,12 +43,14 @@ class OptionController extends Controller
     }
     public function jabraIV()
     {
+      $title = "Action in IV's";
       $action = $this->od->jabardastIV();
-      return view ('jabraIV',compact('action'));
+      return view ('jabraIV',compact('action','title'));
     }
     public function niftyExpiryWise($expiry)
     {
+      $title = "Nifty Heavy OI Positions";
       $action = $this->od->niftyExpiryWise($expiry);
-      return view ('jabraIV',compact('action'));
+      return view ('jabraIV',compact('action','title'));
     }
 }

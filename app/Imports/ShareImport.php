@@ -148,7 +148,7 @@ class ShareImport
         }
     }
 
-    public function convertPlainTextLineByLineToArray($data)
+    public function convertPlainTextLineByLineToArray(string $data)
     {
         $convert = explode("\n", $data); //create array separate by new line
         foreach ($convert as $value) {
@@ -161,5 +161,22 @@ class ShareImport
     {
         $json = json_decode(file_get_contents($url, false, $this->contextValue()), true);
         return $json;
+    }
+
+    public function getNodeValue($nodeRawData)
+    {
+      foreach ($nodeRawData as $tag) {
+          $searchChar = ["\t\r", "\r", "\t", " ", "Chart", ","];
+          $nodeProcessedData[] = str_replace($searchChar, '', $tag->nodeValue);
+      }
+      return $nodeProcessedData;
+    }
+
+    public function convertWholeLineToArray(array $lineData)
+    {
+      foreach ($lineData as $key => $value) {
+          $lineDataArray[] = array_values(array_filter(explode("\n", $value)));
+      }
+      return $lineDataArray;
     }
 }

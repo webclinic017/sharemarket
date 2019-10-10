@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <table class="table">
                     <tr>
                         <th>Client Type</th>
@@ -49,6 +49,30 @@
                             <td>{{$md['indexOptionCall']}}</td>
                             <td>{{$md['indexOptionPut']}}</td>
                             <td>{{$md['stockFuture']}}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+            <div class="col-md-5">
+                <table class="table" style="font-size: .8rem;">
+                  <tr>
+                    <th colspan="5">Trading activity on NSE,BSE and MSEI in Capital Market Segment<br/>(In Rs. Crores)</th>
+                  </tr>
+                    <tr>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Buy Value</th>
+                        <th>Sell Value</th>
+                        <th>Net Value</th>
+                    </tr>
+
+                    @foreach($partipantData as $type => $md)
+                        <tr>
+                            <td>{{$md[0]}}</td>
+                            <td>{{$md[1]}}</td>
+                            <td>{{$md[2]}}</td>
+                            <td>{{$md[3]}}</td>
+                            <td>{{$md[4]}}</td>
                         </tr>
                     @endforeach
                 </table>

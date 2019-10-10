@@ -37,7 +37,7 @@ Route::get('/lekhajokha', 'DashboardController@landingPage')->name('landingPage'
 Route::get('/participant', 'ParticipantController@perSegment')->name('perSegment');
 Route::get('/raw', 'OptionController@jabraAction')->name('jabraAction');
 Route::get('/jabraiv', 'OptionController@jabraIV')->name('jabraIV');
-Route::get('/niftyexpirywise/{expiry}', 'OptionController@niftyExpiryWise')->name('jabraIV');
+Route::get('/niftyexpirywise/{expiry}', 'OptionController@niftyExpiryWise')->name('niftyExpiryWise');
 Route::get('/jabraopeninterest', 'DashboardController@strongOI')->name('strongOI');
 Route::get('/fiboo', 'FibonacciController@fibonacciCalculator')->name('fibb');
-Route::get('/fii', 'FibonacciController@fiiData')->name('fii');
+Route::get('/fii', 'DashboardController@tradingActivity')->name('fii');

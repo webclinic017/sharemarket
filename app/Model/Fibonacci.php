@@ -22,7 +22,8 @@ class Fibonacci extends Model
             $this->stockFibLevel["$fiblevel"] = ($diff * $fiblevel) + $low;
 
         }
-        dd($this->stockFibLevel);
+        $fibonacciLevel = json_encode($this->stockFibLevel);
+        dd($this->stockFibLevel, $fibonacciLevel);
     }
 
     public function fibLevelsDownTrend($high, $low)
@@ -38,5 +39,12 @@ class Fibonacci extends Model
 
         }
         dd($this->stockFibLevel);
+    }
+
+    public function rangeCalculator($fibLevel)
+    {
+        $fibonacciLevel = json_decode($fibLevel);
+        $fibooLevelWithRange = [];
+        dd($fibonacciLevel);
     }
 }

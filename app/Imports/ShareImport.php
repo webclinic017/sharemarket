@@ -43,7 +43,7 @@ class ShareImport
     /**
      * Initialize scrapping websites
      *
-     * @param  string $url
+     * @param string $url
      * @return bool
      */
     public function get($url)
@@ -78,7 +78,7 @@ class ShareImport
     /**
      * Search dom by id attribute
      *
-     * @param  string $id
+     * @param string $id
      * @return string
      */
     public function findId($id)
@@ -90,7 +90,7 @@ class ShareImport
     /**
      * Search dom by class attribute
      *
-     * @param  string $class
+     * @param string $class
      * @return DOMNodeList
      */
     public function findClass($class)
@@ -102,7 +102,7 @@ class ShareImport
     /**
      * Search dom by tag name
      *
-     * @param  string $class
+     * @param string $class
      * @return DOMNodeList
      */
     public function findTag($tagName)
@@ -165,18 +165,18 @@ class ShareImport
 
     public function getNodeValue($nodeRawData)
     {
-      foreach ($nodeRawData as $tag) {
-          $searchChar = ["\t\r", "\r", "\t", " ", "Chart", ","];
-          $nodeProcessedData[] = str_replace($searchChar, '', $tag->nodeValue);
-      }
-      return $nodeProcessedData;
+        foreach ($nodeRawData as $tag) {
+            $searchChar = ["\t\r", "\r", "\t", " ", "Chart", ","];
+            $nodeProcessedData[] = str_replace($searchChar, '', $tag->nodeValue);
+        }
+        return $nodeProcessedData;
     }
 
     public function convertWholeLineToArray(array $lineData)
     {
-      foreach ($lineData as $key => $value) {
-          $lineDataArray[] = array_values(array_filter(explode("\n", $value)));
-      }
-      return $lineDataArray;
+        foreach ($lineData as $key => $value) {
+            $lineDataArray[] = array_values(array_filter(explode("\n", $value)));
+        }
+        return $lineDataArray;
     }
 }

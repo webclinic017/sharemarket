@@ -87,7 +87,8 @@ class OpenInterest extends Model
 
     public function watchlistStocks($limit)
     {
-        $watchlist = $this::where('watchlist', 1)->orderBy('date', 'desc')->limit($limit)->get()->toArray();
+        //$watchlist = $this::where('watchlist', 1)->orderBy('date', 'desc')->limit($limit)->get()->toArray();
+        $watchlist = $this::where('watchlist', 1)->orderBy('date', 'desc')->paginate($limit);
         return $watchlist;
     }
 }

@@ -42,4 +42,10 @@ class CommonFunctionality
         $expiryDate = date('Y-m-d', strtotime($date));
         return $expiryDate;
     }
+
+    public function convertDateWithFormat($date, $format)
+    {
+        $expiryDate = date($format, strtotime($date));
+        return $expiryDate;
+    }
 }

@@ -174,7 +174,8 @@ class OptionData extends Model
 
                 if ($insertYN == false && $watchList == 1) {
                     echo $underlying . " expiry $expiryNumber Strike price " . $optionChainColumns['strikeprice'] . " chng in oi call " .
-                        $optionChainColumns['callchnginoi'] . " chng in OI Put " . $optionChainColumns['putchnginoi'] . "iv RATIO " . $ivRatio . "\n";
+                        $optionChainColumns['callchnginoi'] . " chng in OI Put " . $optionChainColumns['putchnginoi'] .
+                        "iv RATIO " . $ivRatio . " Call LTP " . $optionChainColumns['callltp']. " Put LTP ". $optionChainColumns['putltp']. "\n";
                 }
                 $optionChainColumns['watchlist'] = $watchList;
                 $optionChain[] = $optionChainColumns;
@@ -255,11 +256,39 @@ class OptionData extends Model
 
     public function jabardastAction()
     {
-        $action = \DB::select("SELECT DATE,oc.expirydate,strikeprice,callchnginoi,putchnginoi,calliv,
-                putiv,ivratio,oc.symbol,callltp, putltp, oce_id FROM option_chain JOIN option_chain_expiry oc ON
-                oce_id = oc.id WHERE (callchnginoi > 1000000 OR putchnginoi > 1000000)
-                ORDER BY `date` DESC");
+        $action = \DB::table('option_chain')->join('option_chain_expiry AS oc', 'oce_id', '=', 'oc.id')
+            ->WHERE('callchnginoi', '>', '1000000')
+            ->orWhere('putchnginoi', '>', '1000000')
+            ->orderBy('date', 'desc')
+            ->select('DATE', 'oc.expirydate', 'strikeprice', 'callchnginoi', 'putchnginoi', 'calliv',
+                'putiv', 'ivratio', 'oc.symbol', 'callltp', 'putltp', 'oce_id'
+            )
+            ->paginate(10);
+        return $action;
+    }
 
+    public function jabardastActionWatchlist()
+    {
+        $action = \DB::table('option_chain')->join('option_chain_expiry AS oc', 'oce_id', '=', 'oc.id')
+            ->WHERE('watchlist', '=', '1')
+            ->orderBy('date', 'desc')
+            ->select('DATE', 'oc.expirydate', 'strikeprice', 'callchnginoi', 'putchnginoi', 'calliv',
+                'putiv', 'ivratio', 'oc.symbol', 'callltp', 'putltp', 'oce_id'
+            )
+            ->paginate(10);
+        return $action;
+    }
+
+    public function moreThanHundredIV()
+    {
+        $action = \DB::table('option_chain')->join('option_chain_expiry AS oc', 'oce_id', '=', 'oc.id')
+            ->WHERE('calliv', '>', 100)
+            ->orWHERE('putiv', '>', 100)
+            ->orderBy('date', 'desc')
+            ->select('DATE', 'oc.expirydate', 'strikeprice', 'callchnginoi', 'putchnginoi', 'calliv',
+                'putiv', 'ivratio', 'oc.symbol', 'callltp', 'putltp', 'oce_id'
+            )
+            ->paginate(10);
         return $action;
     }
 
@@ -279,6 +308,40 @@ class OptionData extends Model
                 oce_id = oc.id WHERE expiry = ? AND oc.symbol = 'NIFTY' AND watchlist = 1
                 ORDER BY `date` DESC", [$expiryNumber]);
         return $action;
+    }
+
+    public function latestPremiums()
+    {
+        $action = \DB::select("SELECT
+                                oce_id,
+                                    date,
+                                    oce.expirydate,
+                                    strikeprice,
+                                    callchnginoi,
+                                    callvolume,
+                                    putchnginoi,
+                                    putvolume,
+                                    calliv,
+                                    putiv,
+                                    ivratio,
+                                    callltp,
+                                    putltp,
+                                    oce.symbol
+                                FROM
+                                    `option_chain` oc 
+                                        JOIN
+                                    option_chain_expiry oce ON oce_id = oce.id and date = oce.expirydate
+                                order by date desc;");
+        return $action;
+    }
+
+    public function latestPremiumDataStructure(array $premiumRawData)
+    {
+        $premiumData = [];
+        for ($i = 0; $i < count($premiumRawData); $i++) {
+            $premiumData[$premiumRawData[$i]->oce_id][$premiumRawData[$i]->strikeprice] = $premiumRawData[$i];
+        }
+        return $premiumData;
     }
 
 }

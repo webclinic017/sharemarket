@@ -36,21 +36,43 @@ class OptionController extends Controller
     {
         $underlyingExpiries = $this->od->indexOptionData();
     }
+
     public function jabraAction()
     {
-      $action = $this->od->jabardastAction();
-      return view ('jabraaction',compact('action'));
+        $action = $this->od->jabardastAction();
+        $rawPremium = $this->od->latestPremiums();
+        $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        // dd($latestPremium[1597]);
+        return view('jabraaction', compact('action', 'latestPremium'));
     }
+
+    public function jabardastActionWatchlist()
+    {
+        $action = $this->od->jabardastActionWatchlist();
+        $rawPremium = $this->od->latestPremiums();
+        $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        return view('jabraaction', compact('action', 'latestPremium'));
+    }
+
+    public function moreThanHundredIV()
+    {
+        $action = $this->od->moreThanHundredIV();
+        $rawPremium = $this->od->latestPremiums();
+        $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        return view('jabraaction', compact('action', 'latestPremium'));
+    }
+
     public function jabraIV()
     {
-      $title = "Action in IV's";
-      $action = $this->od->jabardastIV();
-      return view ('jabraIV',compact('action','title'));
+        $title = "Action in IV's";
+        $action = $this->od->jabardastIV();
+        return view('jabraIV', compact('action', 'title'));
     }
+
     public function niftyExpiryWise($expiry)
     {
-      $title = "Nifty Heavy OI Positions";
-      $action = $this->od->niftyExpiryWise($expiry);
-      return view ('jabraIV',compact('action','title'));
+        $title = "Nifty Heavy OI Positions";
+        $action = $this->od->niftyExpiryWise($expiry);
+        return view('jabraIV', compact('action', 'title'));
     }
 }

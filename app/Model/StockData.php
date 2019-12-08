@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use function Aws\clear_compiled_json;
 use Illuminate\Database\Eloquent\Model;
 use App\Imports\ShareImport;
 use App\Imports\CommonFunctionality;
@@ -91,6 +92,7 @@ class StockData extends Model
                     $dataDelivery[$j]['symbol'] = $shareArray[$i][2] ?? null;
                     $dataDelivery[$j]['series'] = $shareArray[$i][3] ?? null;
                     $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4] ?? null;
+                    is_int($shareArray[$i][5]) ? $shareArray[$i][5] : $shareArray[$i][5] = 0;
                     $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5] ?? null;
                     $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6] ?? null;
                     $dataDelivery[$j]['date'] = "$date[4]$date[5]$date[6]$date[7]-$date[2]$date[3]-$date[0]$date[1]";
@@ -134,7 +136,9 @@ class StockData extends Model
                 $dataDelivery[$j]['total_traded_qty'] = trim($shareArray[$i][10]) ?? null;
                 $dataDelivery[$j]['turnover'] = trim($shareArray[$i][11]) ?? null;
                 $dataDelivery[$j]['no_of_trades'] = trim($shareArray[$i][12]) ?? null;
+                is_int(trim($shareArray[$i][13])) ? trim($shareArray[$i][13]) : $shareArray[$i][13] = 0;
                 $dataDelivery[$j]['deliverable_qty'] = trim($shareArray[$i][13]) ?? null;
+                is_int(trim($shareArray[$i][14])) ? trim($shareArray[$i][14]) : $shareArray[$i][14] = 0;
                 $dataDelivery[$j]['per_delqty_to_trdqty'] = trim($shareArray[$i][14]) ?? null;
                 $dataDelivery[$j]['date'] = $bhavDaate;
                 $j++;

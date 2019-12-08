@@ -98,7 +98,7 @@ class ShareInfoController extends Controller
             $dataDelivery[$j]['symbol'] = $shareArray[$i][2];
             $dataDelivery[$j]['series'] = $shareArray[$i][3];
             $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4];
-            $dataDelivery[$j]['deliverable_qty'] = $shareArray[$i][5];
+            $dataDelivery[$j]['deliverable_qty'] = is_int($shareArray[$i][5]) ? $shareArray[$i][5] : 0;
             $dataDelivery[$j]['per_delqty_to_trdqty'] = $shareArray[$i][6];
             $j++;
         }

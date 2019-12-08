@@ -22,11 +22,12 @@
                             @if(isset($avgOi))
                                 @foreach($avgOi as $oi)
                                     <tr>
-                                        <th>{{$oi['date']}}</th>
-                                        <td>{{$oi['symbol']}}</td>
-                                        <td>{{$oi['open_interest']}}</td>
+                                        <th>{{$oi->date}}</th>
+                                        <td>{{$oi->symbol}}</td>
+                                        <td>{{$oi->open_interest}}</td>
                                     </tr>
                                 @endforeach
+                                    {{ $avgOi->links() }}
                             @endif
                         </table>
                 </div>

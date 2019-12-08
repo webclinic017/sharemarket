@@ -46,13 +46,13 @@ class ParticipantController extends Controller
 
     public function perSegment()
     {
-      $segment = ['CLIENT', 'PRO', 'FII', 'DII'];
-      $segmentWiseData = [];
-      $limit = 10;
-      foreach ($segment as $segName) {
-        $segmentWiseData[$segName] = $this->pOi->perSegParticipantOI($segName, $limit);
-      }
-      return view ('participant',compact('segmentWiseData','limit'));
+        $segment = ['CLIENT', 'PRO', 'FII', 'DII'];
+        $segmentWiseData = [];
+        $limit = 10;
+        foreach ($segment as $segName) {
+            $segmentWiseData[$segName] = $this->pOi->perSegParticipantOI($segName, $limit);
+        }
+        return view('participant', compact('segmentWiseData', 'limit'));
     }
 
 }

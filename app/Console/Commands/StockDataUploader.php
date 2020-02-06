@@ -62,13 +62,14 @@ class StockDataUploader extends Command
      */
     public function handle()
     {
+        $this->sd->getAvgDeliveryPerDay();
         echo $this->bhavCopyDataPull();
         echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
         echo $this->watchListBasedOnOI();
-        echo $this->oiSpurts();
-        echo $this->optionChainData();
+       // echo $this->oiSpurts();
+        //echo $this->optionChainData();
         return true;
     }
 
@@ -99,6 +100,7 @@ class StockDataUploader extends Command
     {
         $tableName = 'stock_data';
         $frmToDates = $this->cf->fromDateToDate($tableName);
+
         if ($frmToDates === false) {
             return "delivery data is already updated";
         } else {

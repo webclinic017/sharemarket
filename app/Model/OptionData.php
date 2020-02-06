@@ -35,7 +35,7 @@ class OptionData extends Model
 
     public function fnoStocksExpiry($optionType)
     {
-        $fnoData = json_decode(file_get_contents("https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=$optionType&u=infy", false, $this->context), true);
+        $fnoData = json_decode(file_get_contents("https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteDataTest.jsp?i=$optionType&u=infy", false, $this->context), true);
         return $fnoData;
     }
 
@@ -77,7 +77,7 @@ class OptionData extends Model
 
     public function getOptionData($symbol, $expiryDate, $optionType)
     {
-        $url = "https://www.nseindia.com/live_market/dynaContent/live_watch/option_chain/optionKeys.jsp?segmentLink=&instrument=$optionType&symbol=$symbol&date=$expiryDate";
+        $url = "https://www1.nseindia.com/live_market/dynaContent/live_watch/option_chain/optionKeys.jsp?segmentLink=&instrument=$optionType&symbol=$symbol&date=$expiryDate";
         $data = $this->optionDataFetch($url);
         return $data;
     }
@@ -267,15 +267,19 @@ class OptionData extends Model
         return $action;
     }
 
-    public function jabardastActionWatchlist()
+    public function jabardastActionWatchlist($stockName)
     {
         $action = \DB::table('option_chain')->join('option_chain_expiry AS oc', 'oce_id', '=', 'oc.id')
             ->WHERE('watchlist', '=', '1')
             ->orderBy('date', 'desc')
             ->select('DATE', 'oc.expirydate', 'strikeprice', 'callchnginoi', 'putchnginoi', 'calliv',
                 'putiv', 'ivratio', 'oc.symbol', 'callltp', 'putltp', 'oce_id'
-            )
-            ->paginate(10);
+            );
+
+        if($stockName) {
+            $action = $action->WHERE('oc.symbol', '=', $stockName);
+        }
+        $action = $action->paginate(10);
         return $action;
     }
 

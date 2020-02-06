@@ -48,7 +48,7 @@ class ParticipantController extends Controller
     {
         $segment = ['CLIENT', 'PRO', 'FII', 'DII'];
         $segmentWiseData = [];
-        $limit = 10;
+        $limit = 40;
         foreach ($segment as $segName) {
             $segmentWiseData[$segName] = $this->pOi->perSegParticipantOI($segName, $limit);
         }

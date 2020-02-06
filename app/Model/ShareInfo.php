@@ -15,7 +15,7 @@ class ShareInfo extends Model
         //    $to = new \DateTime('2019-03-22 00:00:00');
         $fm = $from->format('Y-m-d');//for printing purpose only
         for ($i = 0; $from <= $to; $i++) {
-            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+            if (in_array($from->format('D'), ['Sun'])) {
                 $from = $from->modify('+1 day');
             } else {
                 $dateOfOI = $from->format('d') . $from->format('m') . $from->format('Y');
@@ -53,7 +53,7 @@ class ShareInfo extends Model
                 ),
             )
         );
-        $f = @file_put_contents("my-zip.zip", fopen("https://www.nseindia.com/archives/nsccl/mwpl/combineoi_$date.zip", 'r', 0, $context), LOCK_EX, $context);
+        $f = @file_put_contents("my-zip.zip", fopen("https://www1.nseindia.com/archives/nsccl/mwpl/combineoi_$date.zip", 'r', 0, $context), LOCK_EX, $context);
         if (0 === $f) {
             return false;
         }

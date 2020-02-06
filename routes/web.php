@@ -43,3 +43,4 @@ Route::get('/niftyexpirywise/{expiry}', 'OptionController@niftyExpiryWise')->nam
 Route::get('/jabraopeninterest', 'DashboardController@strongOI')->name('strongOI');
 Route::get('/fiboo', 'FibonacciController@fibonacciCalculator')->name('fibb');
 Route::get('/fii', 'DashboardController@tradingActivity')->name('fii');
+Route::get('/avgdevliery', 'DashboardController@strongDelivery')->name('avgoi');

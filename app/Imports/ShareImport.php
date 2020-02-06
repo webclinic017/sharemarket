@@ -17,9 +17,9 @@ class ShareImport
     /**
      * ParseDocument constructor
      */
-    public function __construct()
+    public function __construct ()
     {
-        $this->setDomDocument();
+        $this -> setDomDocument ();
     }
 
     /**
@@ -27,17 +27,17 @@ class ShareImport
      *
      * @return domDocument
      */
-    public function getDomDocument()
+    public function getDomDocument ()
     {
-        return $this->domDocument;
+        return $this -> domDocument;
     }
 
     /**
      * Set domDocument object
      */
-    public function setDomDocument()
+    public function setDomDocument ()
     {
-        $this->domDocument = new \domDocument();
+        $this -> domDocument = new \domDocument();
     }
 
     /**
@@ -46,12 +46,12 @@ class ShareImport
      * @param string $url
      * @return bool
      */
-    public function get($url)
+    public function get ($url)
     {
-        $file = $this->pullDataFromRemote($url);
-        libxml_use_internal_errors(true);
+        $file = $this -> pullDataFromRemote ($url);
+        libxml_use_internal_errors (true);
         //dd($file, $this->domDocument->loadHTML($file));
-        return ($file) ? $this->domDocument->loadHTML($file) : false;
+        return ($file) ? $this -> domDocument -> loadHTML ($file) : false;
     }
 
     /**
@@ -59,16 +59,16 @@ class ShareImport
      *
      * @return string
      */
-    public function pullDataFromRemote($url): string
+    public function pullDataFromRemote ($url): string
     {
-        $context = stream_context_create(
-            array(
-                'http' => array(
-                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201')
+        $context = stream_context_create (
+            array (
+                'http' => array (
+                    'header' => array ('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201')
                 )
             )
         );
-        return @file_get_contents(
+        return @file_get_contents (
             $url,
             false,
             $context
@@ -81,9 +81,9 @@ class ShareImport
      * @param string $id
      * @return string
      */
-    public function findId($id)
+    public function findId ($id)
     {
-        $element = $this->domDocument->getElementById($id);
+        $element = $this -> domDocument -> getElementById ($id);
         return $element;
     }
 
@@ -93,10 +93,10 @@ class ShareImport
      * @param string $class
      * @return DOMNodeList
      */
-    public function findClass($class)
+    public function findClass ($class)
     {
-        $finder = new \DomXPath($this->domDocument);
-        return $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), '$class')]");
+        $finder = new \DomXPath($this -> domDocument);
+        return $finder -> query ("//*[contains(concat(' ', normalize-space(@class), ' '), '$class')]");
     }
 
     /**
@@ -105,9 +105,9 @@ class ShareImport
      * @param string $class
      * @return DOMNodeList
      */
-    public function findTag($tagName)
+    public function findTag ($tagName)
     {
-        $element = $this->domDocument->getElementsByTagName($tagName);
+        $element = $this -> domDocument -> getElementsByTagName ($tagName);
         return $element;
     }
 
@@ -116,66 +116,69 @@ class ShareImport
      *
      * @return User|null
      */
-    public function contextValue()
+    public function contextValue ()
     {
-        $context = stream_context_create(
-            array(
-                'http' => array(
-                    'header' => array('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
-                    'timeout' => 10000
+        $context = stream_context_create (
+            array (
+                'http' => array (
+                    'header' => array ('User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+                    'timeout' => 1000000
+                ),
+                'ssl' => array (
+                    'verify_peer' => false,
                 ),
             )
         );
         return $context;
     }
 
-    public function downloadZip($url)
+    public function downloadZip ($url)
     {
         $str = "\\extract-here";
-        $path = public_path() . $str;
-        $f = file_put_contents("my-zip.zip", fopen("$url", 'r', 0, $this->context), LOCK_EX, $this->context);
+        $path = public_path () . $str;
+        $f = file_put_contents ("my-zip.zip", fopen ("$url", 'r', 0, $this -> context), LOCK_EX, $this -> context);
         if (false === $f) {
             die("Couldn't write to file.");
         }
         $zip = new \ZipArchive;
-        $res = $zip->open('my-zip.zip');
+        $res = $zip -> open ('my-zip.zip');
         if ($res === true) {
-            $zip->extractTo($path);
-            $zip->close();
+            $zip -> extractTo ($path);
+            $zip -> close ();
             return true;
         } else {
             return false;
         }
     }
 
-    public function convertPlainTextLineByLineToArray(string $data)
+    public function convertPlainTextLineByLineToArray (string $data)
     {
-        $convert = explode("\n", $data); //create array separate by new line
+        $convert = explode ("\n", $data); //create array separate by new line
         foreach ($convert as $value) {
-            $dataArray[] = explode(",", $value);
+            $dataArray[] = explode (",", $value);
         }
         return $dataArray;
     }
 
-    public function jsonReturnUrl($url)
+    public function jsonReturnUrl ($url)
     {
-        $json = json_decode(file_get_contents($url, false, $this->contextValue()), true);
+        $json = json_decode (file_get_contents ($url, false, $this -> contextValue ()), true);
         return $json;
     }
 
-    public function getNodeValue($nodeRawData)
+    public function getNodeValue ($nodeRawData)
     {
         foreach ($nodeRawData as $tag) {
             $searchChar = ["\t\r", "\r", "\t", " ", "Chart", ","];
-            $nodeProcessedData[] = str_replace($searchChar, '', $tag->nodeValue);
+            $nodeProcessedData[] = str_replace ($searchChar, '', $tag -> nodeValue);
         }
         return $nodeProcessedData;
     }
 
-    public function convertWholeLineToArray(array $lineData)
+    public function convertWholeLineToArray (array $lineData)
     {
         foreach ($lineData as $key => $value) {
-            $lineDataArray[] = array_values(array_filter(explode("\n", $value)));
+            $lineDataArray[] = array_values (array_filter (explode ("\n", $value)));
         }
         return $lineDataArray;
     }

@@ -2,10 +2,12 @@
 
 namespace App\Model;
 
+use App\Model\OpenInterest;
 use function Aws\clear_compiled_json;
 use Illuminate\Database\Eloquent\Model;
 use App\Imports\ShareImport;
 use App\Imports\CommonFunctionality;
+use DB;
 
 class StockData extends Model
 {
@@ -21,8 +23,8 @@ class StockData extends Model
 
     public function shareDataPull()
     {
-        $url = "https://www.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp?symbol=infy&segmentLink=3&symbolCount=1&series=ALL&dateRange=24month&fromDate=&toDate=&dataType=PRICEVOLUMEDELIVERABLE";
-        $url = "https://www.nseindia.com/archives/equities/mto/MTO_01032019.DAT";
+        $url = "https://www1.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp?symbol=infy&segmentLink=3&symbolCount=1&series=ALL&dateRange=24month&fromDate=&toDate=&dataType=PRICEVOLUMEDELIVERABLE";
+        $url = "https://www1.nseindia.com/archives/equities/mto/MTO_01032019.DAT";
         $html = $this->shareImp->get($url);
         dd($html);
         $nodes = $this->shareImp->findId('csvFileName');//  csvContentDiv
@@ -33,7 +35,7 @@ class StockData extends Model
         }
 
         dd($tag_value);
-        $json = json_decode(file_get_contents("https://www.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp?symbol=infy&segmentLink=3&symbolCount=1&series=ALL&dateRange=24month&fromDate=&toDate=&dataType=PRICEVOLUMEDELIVERABLE", false, $this->context), true);
+        $json = json_decode(file_get_contents("https://www1.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp?symbol=infy&segmentLink=3&symbolCount=1&series=ALL&dateRange=24month&fromDate=&toDate=&dataType=PRICEVOLUMEDELIVERABLE", false, $this->context), true);
         //dd($json);
     }
 
@@ -45,7 +47,7 @@ class StockData extends Model
             $from = $from->modify('+1 day');
         } else {
             $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
-            $url = "https://www.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
+            $url = "https://www1.nseindia.com/content/historical/EQUITIES/2019/MAR/cm01MAR2019bhav.csv.zip";
             $html = $this->shareImp->downloadZip($url);
 
             $html = $this->shareImp->get($url);
@@ -56,7 +58,7 @@ class StockData extends Model
     {
         $frm = $from->format('Y-m-d');
         for ($i = 0; $from <= $to; $i++) {
-            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+            if (in_array($from->format('D'), ['Sun'])) {
                 $from = $from->modify('+1 day');
             } else {
                 $dateOfDelivery = $from->format('d') . $from->format('m') . $from->format('Y');
@@ -80,7 +82,8 @@ class StockData extends Model
 
     public function deliveryPull($date)
     {
-        $file = @file_get_contents("https://www.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
+        $dataDelivery = [];
+        $file = @file_get_contents("https://www1.nseindia.com/archives/equities/mto/MTO_$date.DAT", false, $this->context);
         if ($file) {
             $convert = explode("\n", $file); //create array separate by new line
             foreach ($convert as $value) {
@@ -88,7 +91,7 @@ class StockData extends Model
             }
             $j = 0;
             for ($i = 4; $i < count($shareArray) - 1; $i++) {
-                if (count($shareArray) > 0 && isset($shareArray[$i][2]) && 'eq' === strtolower($shareArray[$i][3])) {
+                if (count($shareArray) > 0 && isset($shareArray[$i][3]) && 'eq' === strtolower($shareArray[$i][3])) {
                     $dataDelivery[$j]['symbol'] = $shareArray[$i][2] ?? null;
                     $dataDelivery[$j]['series'] = $shareArray[$i][3] ?? null;
                     $dataDelivery[$j]['total_traded_qty'] = $shareArray[$i][4] ?? null;
@@ -112,7 +115,7 @@ class StockData extends Model
 
     public function bhavCopyDataPull()
     {
-        $url = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
+        $url = 'https://www1.nseindia.com/products/content/sec_bhavdata_full.csv';
         return $this->shareImp->pullDataFromRemote($url);
     }
 
@@ -136,9 +139,9 @@ class StockData extends Model
                 $dataDelivery[$j]['total_traded_qty'] = trim($shareArray[$i][10]) ?? null;
                 $dataDelivery[$j]['turnover'] = trim($shareArray[$i][11]) ?? null;
                 $dataDelivery[$j]['no_of_trades'] = trim($shareArray[$i][12]) ?? null;
-                is_int(trim($shareArray[$i][13])) ? trim($shareArray[$i][13]) : $shareArray[$i][13] = 0;
+                (Int)(trim($shareArray[$i][13])) ? trim($shareArray[$i][13]) : $shareArray[$i][13] = 0;
                 $dataDelivery[$j]['deliverable_qty'] = trim($shareArray[$i][13]) ?? null;
-                is_int(trim($shareArray[$i][14])) ? trim($shareArray[$i][14]) : $shareArray[$i][14] = 0;
+                (Int)(trim($shareArray[$i][14])) ? trim($shareArray[$i][14]) : $shareArray[$i][14] = 0;
                 $dataDelivery[$j]['per_delqty_to_trdqty'] = trim($shareArray[$i][14]) ?? null;
                 $dataDelivery[$j]['date'] = $bhavDaate;
                 $j++;
@@ -159,5 +162,104 @@ class StockData extends Model
         } else {
             return 2;
         }
+    }
+
+    public function getAvgDeliveryPerDay()
+    {
+        $oi = new OpenInterest();
+        $latestDate = $oi->getLatestDate();
+        $movingAvgData = $this->calculateMovingAvg($latestDate);
+        $currentDeliveryPositionData = StockData::select(
+            'stock_data.symbol',
+            'stock_data.total_traded_qty',
+            'stock_data.per_delqty_to_trdqty',
+            'stock_data.deliverable_qty',
+            'stock_data.id'
+            //'stock_data.close_price' #TODO
+        )
+            ->where('stock_data.date', '=', $latestDate)
+            ->where('stock_data.series', 'EQ')
+            ->get();
+
+        $finalStockList = [];
+        foreach ($currentDeliveryPositionData as $currentDeliveryPositionValue) {
+            $symbol = $currentDeliveryPositionValue->symbol;
+            if (true == true) { #TODO // isset($movingAvgData[$symbol.'_20']['avg_close_price'])
+                if (true == true
+                # TODO //($movingAvgData[$symbol.'_20']['avg_close_price'] <= $currentDeliveryPositionValue->close_price )
+                ) {
+                    if (
+                    ($movingAvgData[$symbol.'_20']['avg_traded_quantity'] <= $currentDeliveryPositionValue->total_traded_qty)
+                    ) {
+
+                        //$deliverable_quantity_percentage_20 = ($movingAvgData[$symbol.'_20']['avg_deliverable_quantity']/$movingAvgData[$symbol.'_20']['avg_traded_quantity'])*100;
+                        //$current_deliverable_quantity_percentage = ($currentDeliveryPositionValue->deliverable_quantity/$currentDeliveryPositionValue->traded_quantity)*100;
+                        $deliverable_quantity_percentage_20 = $movingAvgData[$symbol.'_20']['avg_deliverable_quantity'];
+                        $current_deliverable_quantity_percentage = $currentDeliveryPositionValue->per_delqty_to_trdqty;
+                        if (
+                        ($deliverable_quantity_percentage_20 <= $current_deliverable_quantity_percentage)
+                        ) {
+                            //dd($symbol,$deliverable_quantity_percentage_20, $current_deliverable_quantity_percentage, $latestDate);
+                            $finalStockList[$symbol] = [
+                                /*'price' => [
+                                    20 => $movingAvgData[$symbol.'_20']['avg_close_price'],
+                                    'current' => $currentDeliveryPositionValue->close_price
+                                ],*/
+                                'traded_quantity' => [
+                                    20 => $movingAvgData[$symbol.'_20']['avg_traded_quantity'],
+                                    'current' => $currentDeliveryPositionValue->total_traded_qty
+                                ],
+                                'deliverable_quantity_percentage' => [
+                                    20 => $deliverable_quantity_percentage_20,
+                                    'current' => $current_deliverable_quantity_percentage
+                                ],
+                            ];
+                            $yn = $this::where('id', $currentDeliveryPositionValue->id)->update(['prev_close' => 1]);
+                        }
+                    }
+
+                }
+            }
+        }
+        return $yn;
+        //dd($finalStockList);
+    }
+
+    private function calculateMovingAvg($latestDate)
+    {
+        $intervalArray = [
+            20
+        ];
+        $result = [];
+        foreach ($intervalArray as $intervalValue) {
+            //$interval = $this->getDateRangeByInterval('2019-10-10', $intervalValue);
+
+            $movingAvgData = StockData::select(
+                    'stock_data.symbol',
+                    DB::raw('AVG(stock_data.total_traded_qty) as avg_traded_quantity'),
+                    DB::raw('AVG(stock_data.per_delqty_to_trdqty) as avg_deliverable_quantity')
+                    //DB::raw('AVG(stock_data.close_price) as avg_close_price') #TODO
+                )
+                ->where('stock_data.series', 'EQ')
+               // ->whereBetween('delivery_positions.traded_at', $interval)
+                ->whereRaw("date > DATE_SUB(curdate(), INTERVAL $intervalValue DAY) and date < '$latestDate'")
+                ->groupBy('stock_data.symbol')
+                ->get();
+            foreach ($movingAvgData as $key => $value) {
+                $result[$value->symbol.'_'.$intervalValue] = [
+                    'symbol' => $value->symbol,
+                    'avg_traded_quantity' => $value->avg_traded_quantity,
+                    'avg_deliverable_quantity' => $value->avg_deliverable_quantity,
+                   // 'avg_close_price' => $value->avg_close_price,
+                ];
+            }
+        }
+        return $result;
+    }
+
+    public function watchlistStocks($limit)
+    {
+        $watchlist = $this::where('prev_close', 1)->orderBy('id', 'desc')->paginate($limit);
+        return $watchlist;
     }
 }

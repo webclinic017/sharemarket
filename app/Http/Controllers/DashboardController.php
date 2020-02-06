@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\NiftyIndex;
 use App\Model\OptionData;
+use App\Model\StockData;
 use Illuminate\Http\Request;
 use App\Model\Pcr;
 use App\Imports\CommonFunctionality;
@@ -67,5 +68,12 @@ class DashboardController extends Controller
         $ni = new NiftyIndex();
         $ratios = $ni->indexRatios();
         return $ratios;
+    }
+
+    public function strongDelivery()
+    {
+        $sd = new StockData();
+        $avgDelivery = $sd->watchlistStocks(20);
+        return view('averageDelivery', compact('avgDelivery'));
     }
 }

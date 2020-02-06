@@ -23,7 +23,7 @@ class ParticipantOI extends Model
         //$to = new \DateTime('2019-03-13 00:00:00');
         $fm = $from->format('Y-m-d');//for printing purpose only
         for ($i = 0; $from <= $to; $i++) {
-            if (in_array($from->format('D'), ['Sat', 'Sun'])) {
+            if (in_array($from->format('D'), ['Sun'])) {
                 $from = $from->modify('+1 day');
             } else {
                 $dateOfPOI = $from->format('d') . $from->format('m') . $from->format('Y');
@@ -51,7 +51,7 @@ class ParticipantOI extends Model
     public function participantOIDataPull($date)
     {
         $dataArray = null;
-        $url = "https://www.nseindia.com/content/nsccl/fao_participant_oi_$date.csv";
+        $url = "https://www1.nseindia.com/content/nsccl/fao_participant_oi_$date.csv";
         $data = $this->shareImp->pullDataFromRemote($url);
         if ($data) {
             $dataArray = $this->shareImp->convertPlainTextLineByLineToArray($data);
@@ -147,7 +147,7 @@ class ParticipantOI extends Model
     {
       $partipants = ['fii','Dii']; $partipantsData = [];
       foreach ($partipants as $partipant) {
-        $url = 'https://www.nseindia.com/products/dynaContent/equities/equities/htms/'.$partipant.'EQ.htm';
+        $url = 'https://www1.nseindia.com/products/dynaContent/equities/equities/htms/'.$partipant.'EQ.htm';
         $rawHtmlDataPart = $this->shareImp->get($url);
         $exptractedDataPart = $this->shareImp->findClass('alt');
         $dataPart = $this->shareImp->getNodeValue($exptractedDataPart);

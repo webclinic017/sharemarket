@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/sharemarket.iml" filepath="$PROJECT_DIR$/.idea/sharemarket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sharer_market/.idea/sharer_market.iml" filepath="$PROJECT_DIR$/../sharer_market/.idea/sharer_market.iml" />
     </modules>
   </component>
 </project>

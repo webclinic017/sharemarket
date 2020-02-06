@@ -5,7 +5,18 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header"><h4>Jabardast Action</h4></div>
+                    <div class="card-header"><h4>Jabardast Action</h4>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="stockName">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <!--i class="glyphicon glyphicon-search"></i-->GO
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -65,7 +76,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{$action->links()}}
+                        {{$action->appends($_GET)->links()}}
                     </div>
                 </div>
             </div>

@@ -46,11 +46,18 @@ class OptionController extends Controller
         return view('jabraaction', compact('action', 'latestPremium'));
     }
 
-    public function jabardastActionWatchlist()
+    public function jabardastActionWatchlist(Request $req)
     {
-        $action = $this->od->jabardastActionWatchlist();
-        $rawPremium = $this->od->latestPremiums();
-        $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        if($req->stockName) {
+            $action = $this->od->jabardastActionWatchlist($req->stockName);
+            $rawPremium = $this->od->latestPremiums();
+            $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        } else {
+            $action = $this->od->jabardastActionWatchlist($req->stockName);
+            $rawPremium = $this->od->latestPremiums();
+            $latestPremium = $this->od->latestPremiumDataStructure($rawPremium);
+        }
+
         return view('jabraaction', compact('action', 'latestPremium'));
     }
 

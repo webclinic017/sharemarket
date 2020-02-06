@@ -18,7 +18,7 @@ class OiSpurt extends Model
     public function riseInPriceRiseInOI()
     {
         $yn = false;
-        $url = 'https://www.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/riseInPriceRiseInOI.json';
+        $url = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/riseInPriceRiseInOI.json';
         $riseInPriceRiseInOI = $this->si->jsonReturnUrl($url);
         $fetchDate = $this->lastDateData($riseInPriceRiseInOI['time'], 1);
         if ($fetchDate) {
@@ -74,7 +74,7 @@ class OiSpurt extends Model
     public function slideInPriceRiseInOI()
     {
         $yn = false;
-        $url = 'https://www.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/slideInPriceRiseInOI.json';
+        $url = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/slideInPriceRiseInOI.json';
         $slideInPriceRiseInOI = $this->si->jsonReturnUrl($url);
         $fetchDate = $this->lastDateData($slideInPriceRiseInOI['time'], 2);
         if ($fetchDate) {

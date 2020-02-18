@@ -184,7 +184,7 @@ class StockData extends Model
         $finalStockList = [];
         foreach ($currentDeliveryPositionData as $currentDeliveryPositionValue) {
             $symbol = $currentDeliveryPositionValue->symbol;
-            if (true == true) { #TODO // isset($movingAvgData[$symbol.'_20']['avg_close_price'])
+            if (isset($movingAvgData[$symbol.'_20'])) { #TODO // isset($movingAvgData[$symbol.'_20']['avg_close_price'])
                 if (true == true
                 # TODO //($movingAvgData[$symbol.'_20']['avg_close_price'] <= $currentDeliveryPositionValue->close_price )
                 ) {
@@ -257,9 +257,26 @@ class StockData extends Model
         return $result;
     }
 
-    public function watchlistStocks($limit)
+    public function watchlistStocks($limit, $data)
     {
-        $watchlist = $this::where('prev_close', 1)->orderBy('id', 'desc')->paginate($limit);
+        $watchlist = $this::select('stock_data.date','stock_data.symbol', 'per_delqty_to_trdqty', 'total_traded_qty')
+                        ->where('prev_close', 1)->orderBy('stock_data.id', 'desc');
+
+        if(!empty($data['stockName']))
+            $watchlist = $watchlist->where('symbol', $data['stockName']);
+
+        $watchlist = $watchlist->paginate($limit);
+
+        //LEFTJOIN('oi_data','stock_data.symbol', 'oi_data.symbol')
+        //, 'open_interest', 'watchlist'
+
         return $watchlist;
+    }
+    public function fnoStocks(array $stocks)
+    {
+        $date = $this::latest('date')->first();
+        $isFno = OpenInterest::whereIn('symbol', $stocks)->where('date', $date->date)->pluck('watchlist', 'symbol')->toArray();
+        return $isFno;
+
     }
 }

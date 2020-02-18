@@ -70,10 +70,12 @@ class DashboardController extends Controller
         return $ratios;
     }
 
-    public function strongDelivery()
+    public function strongDelivery(Request $req)
     {
         $sd = new StockData();
-        $avgDelivery = $sd->watchlistStocks(20);
-        return view('averageDelivery', compact('avgDelivery'));
+        $avgDelivery = $sd->watchlistStocks(20, $req->all());
+        $stocks = $avgDelivery->pluck('symbol')->toArray();
+        $fno = $sd->fnoStocks($stocks);
+        return view('averageDelivery', compact('avgDelivery', 'fno'));
     }
 }

@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d86fe036-f043-45e5-8a69-e0cec1e2d1e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/averageDelivery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sharemarket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sharemarket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Imports/ShareImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/ShareImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Fibonacci.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Fibonacci.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/OiSpurt.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/OiSpurt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/OpenInterest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/OpenInterest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/OptionData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/OptionData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/ParticipantOI.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/ParticipantOI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/ShareInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/ShareInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/StockData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/StockData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/jabraAction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jabraAction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-zip.zip" beforeDir="false" afterPath="$PROJECT_DIR$/my-zip.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/averageDelivery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/averageDelivery.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+            <state relative-caret-position="451">
+              <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -63,29 +50,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/jabraAction.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="26" selection-start-line="7" selection-start-column="20" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/OpenInterest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rawQueries.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockDataController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            <state relative-caret-position="397">
+              <caret line="82" column="69" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -102,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Imports/ShareImport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+            <state relative-caret-position="2074">
+              <caret line="127" column="42" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -111,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/StockData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="261" column="63" selection-start-line="261" selection-start-column="63" selection-end-line="261" selection-end-column="63" />
+            <state relative-caret-position="285">
+              <caret line="277" column="109" selection-start-line="277" selection-start-column="85" selection-end-line="277" selection-end-column="126" />
               <folding>
                 <element signature="e#29#56#0#PHP" expanded="true" />
               </folding>
@@ -121,31 +99,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/averageDelivery.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            <state relative-caret-position="316">
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
                 <element signature="e#40#65#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/averageDelivery.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -158,6 +145,7 @@
       <find>$changeInOIDataConfig</find>
       <find>www</find>
       <find>jabra</find>
+      <find>ARTEMISMED_20</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,20 +159,21 @@
         <option value="$PROJECT_DIR$/rawQueries.php" />
         <option value="$PROJECT_DIR$/app/Model/Fibonacci.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
-        <option value="$PROJECT_DIR$/app/Model/OiSpurt.php" />
         <option value="$PROJECT_DIR$/app/Model/OptionData.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" />
         <option value="$PROJECT_DIR$/resources/views/jabraAction.blade.php" />
-        <option value="$PROJECT_DIR$/app/Imports/ShareImport.php" />
         <option value="$PROJECT_DIR$/app/Imports/CommonFunctionality.php" />
         <option value="$PROJECT_DIR$/app/Model/ParticipantOI.php" />
         <option value="$PROJECT_DIR$/app/Model/ShareInfo.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Model/OpenInterest.php" />
+        <option value="$PROJECT_DIR$/app/Model/OiSpurt.php" />
+        <option value="$PROJECT_DIR$/server.php" />
+        <option value="$PROJECT_DIR$/app/Imports/ShareImport.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php" />
+        <option value="$PROJECT_DIR$/app/Model/StockData.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
         <option value="$PROJECT_DIR$/resources/views/averageDelivery.blade.php" />
-        <option value="$PROJECT_DIR$/app/Model/StockData.php" />
-        <option value="$PROJECT_DIR$/app/Model/OpenInterest.php" />
       </list>
     </option>
   </component>
@@ -285,10 +274,11 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="width" value="1936" />
-    <option name="height" value="880" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="265" />
+    <option name="y" value="90" />
+    <option name="width" value="1935" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -296,7 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,29 +308,13 @@
               <item name="sharemarket" type="b2602c69:ProjectViewProjectNode" />
               <item name="sharemarket" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharemarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharemarket" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Imports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharemarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharemarket" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharemarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharemarket" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +325,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/wmd/wmd-payment-gateway" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -417,17 +390,19 @@
       <workItem from="1580631604934" duration="3000" />
       <workItem from="1580631632797" duration="20745000" />
       <workItem from="1580908176889" duration="782000" />
+      <workItem from="1581065731260" duration="9196000" />
+      <workItem from="1581220662035" duration="15453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136049000" />
+    <option name="totallyTimeSpent" value="160698000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23773988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -440,7 +415,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18634886" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18634886" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -459,9 +434,6 @@
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShareInfoController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-934">
@@ -533,20 +498,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/runtime-api.yaml" />
-    <entry file="file://$PROJECT_DIR$/resources/views/jabraAction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/OiSpurt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Imports/CommonFunctionality.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -605,22 +556,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rawQueries.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/OiSpurt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockDataController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -638,49 +603,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Imports/ShareImport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        <state relative-caret-position="2074">
+          <caret line="127" column="42" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/averageDelivery.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Model/OpenInterest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="397">
+          <caret line="82" column="69" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/StockDataUploader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/StockData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="261" column="63" selection-start-line="261" selection-start-column="63" selection-end-line="261" selection-end-column="63" />
+        <state relative-caret-position="451">
+          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
           <folding>
-            <element signature="e#29#56#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/jabraAction.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="26" selection-start-line="7" selection-start-column="20" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        <state relative-caret-position="316">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="e#40#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/OpenInterest.php">
+    <entry file="file://$PROJECT_DIR$/app/Model/StockData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+        <state relative-caret-position="285">
+          <caret line="277" column="109" selection-start-line="277" selection-start-column="85" selection-end-line="277" selection-end-column="126" />
+          <folding>
+            <element signature="e#29#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/averageDelivery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
         </state>
       </provider>
     </entry>

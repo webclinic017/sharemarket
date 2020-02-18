@@ -17,9 +17,12 @@ class OiSpurt extends Model
 
     public function riseInPriceRiseInOI()
     {
+        ini_set("allow_url_fopen", 1);
         $yn = false;
         $url = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/oi_spurts/riseInPriceRiseInOI.json';
+        $url = 'https://nseindia.com/api/index-names';
         $riseInPriceRiseInOI = $this->si->jsonReturnUrl($url);
+        dd($riseInPriceRiseInOI);
         $fetchDate = $this->lastDateData($riseInPriceRiseInOI['time'], 1);
         if ($fetchDate) {
             $oiSpurtsDataStructure = $this->oiSpurtsDataStructure($riseInPriceRiseInOI, 1, $fetchDate);

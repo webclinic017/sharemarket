@@ -44,6 +44,10 @@ class StockDataUploader extends Command
      */
     public function __construct()
     {
+        ini_set("allow_url_fopen", 1);
+        ignore_user_abort(true);
+        set_time_limit(0);
+        ini_set('memory_limit', '2048M');
         parent::__construct();
         $this->po = new ParticipantOI();
         $this->sd = new StockData();
@@ -62,13 +66,13 @@ class StockDataUploader extends Command
      */
     public function handle()
     {
-        $this->sd->getAvgDeliveryPerDay();
+       // echo $this->oiSpurts();
         echo $this->bhavCopyDataPull();
         echo $this->openInterest();
         echo $this->participantOI();
         echo $this->delivery();
         echo $this->watchListBasedOnOI();
-       // echo $this->oiSpurts();
+        $this->sd->getAvgDeliveryPerDay();
         //echo $this->optionChainData();
         return true;
     }
